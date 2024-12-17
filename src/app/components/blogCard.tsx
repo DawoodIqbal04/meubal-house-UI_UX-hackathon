@@ -4,7 +4,7 @@ import { FiCalendar } from "react-icons/fi";
 import Image from 'next/image';
 
 
-const BlogCard = (props: any) => {
+const BlogCard = (props: any|string) => {
   return (
     <div className='w-[360px] h-[510px]'>
         <div className=' w-full h-[350px] rounded-lg'>
