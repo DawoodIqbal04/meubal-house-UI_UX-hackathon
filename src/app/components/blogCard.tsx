@@ -2,9 +2,10 @@ import React from 'react'
 import { HiOutlineClock } from "react-icons/hi";
 import { FiCalendar } from "react-icons/fi";
 import Image from 'next/image';
+import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 
 
-const BlogCard = (props: any|string) => {
+const BlogCard = (props: { imageUrl: string | StaticImport; title: string; }) => {
   return (
     <div className='w-[360px] h-[510px]'>
         <div className=' w-full h-[350px] rounded-lg'>

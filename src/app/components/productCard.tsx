@@ -1,8 +1,9 @@
+import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-const ProductCard = (props: any|string) => {
+const ProductCard = (props: { imageUrl: string | StaticImport; title: string ; price: string | number }) => {
   return (
     <Link href={""} className='flex flex-col items-center justify-between w-[250px] h-[350px] mt-10'>
         <div className='flex items-center w-full h-[250px] bg-cover'>

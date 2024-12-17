@@ -6,7 +6,7 @@ import { IoSearchOutline } from "react-icons/io5";
 import { IoHeartOutline } from "react-icons/io5";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
-const Header = (props: any|string) => {
+const Header = (props: { bgcolor: string; }) => {
   return (
     <div className={`h-[100px] w-full bg-[${props.bgcolor}] flex items-center justify-around`}>
       <div className="flex items-center">

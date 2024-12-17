@@ -5,7 +5,7 @@ import ShopPage from '../components/ShopPage'
 const page = () => {
   return (
     <div>
-        <Header/>
+        <Header bgcolor={"white"}/>
         <ShopPage />
     </div>
   )
