@@ -1,13 +1,14 @@
 import React from 'react'
 import { HiOutlineClock } from "react-icons/hi";
 import { FiCalendar } from "react-icons/fi";
+import Image from 'next/image';
 
 
 const BlogCard = (props: any) => {
   return (
     <div className='w-[360px] h-[510px]'>
         <div className=' w-full h-[350px] rounded-lg'>
-            <img src={props.imageUrl} alt={props.title} className=' object-cover'/>
+            <Image src={props.imageUrl} alt={props.title} width={390} height={550} className=' object-cover'></Image>
         </div>
         <div className='flex flex-col items-center justify-center gap-2 mt-10'>
             <p className='font-normal text-xl'>{props.title}</p>
