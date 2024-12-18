@@ -21,7 +21,7 @@ const Header = (props: { bgcolor: string; }) => {
       <div>
         <ul className="flex items-center gap-12 font-medium text-base">
           <li>
-            <Link href={""}>Home</Link>
+            <Link href={"/"}>Home</Link>
           </li>
           <li>
             <Link href={"/shop"}>Shop</Link>
@@ -30,7 +30,7 @@ const Header = (props: { bgcolor: string; }) => {
             <Link href={""}>About</Link>
           </li>
           <li>
-            <Link href={""}>Contact</Link>
+            <Link href={"/contact"}>Contact</Link>
           </li>
         </ul>
       </div>
@@ -55,7 +55,7 @@ const Header = (props: { bgcolor: string; }) => {
           <Link href={""}>
             <AiOutlineShoppingCart size={25} />
           </Link>
-          <div className="flex items-center justify-center absolute w-[18px] h-[18px] top-[-20%] right-[-20%] rounded-full text-white text-[13px] bg-red-500">
+          <div className="flex items-center justify-center absolute w-[18px] h-[18px] top-[-20%] right-[-20%] rounded-full text-white text-[13px] bg-red-500 cursor-pointer">
             <span>1</span>
           </div>
         </div>
