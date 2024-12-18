@@ -22,7 +22,7 @@ const page = () => {
             </div>
         </div>
         <div className='w-full min-h-[150vh] flex flex-col items-center justify-around py-20'>
-            <div className='w-[650px] text-center'>
+            <div className='w-[650px] text-center flex flex-col gap-3'>
                 <p className='text-4xl font-semibold'>Get In Touch With Us</p>
                 <p className='text-base font-normal text-[#9f9f9f]'>For More Information About Our Product & Services. Please Feel Free To Drop Us An Email. Our Staff Always Be There To Help You Out. Do Not Hesitate!</p>
             </div>
@@ -73,7 +73,7 @@ const page = () => {
                             <textarea className='font-normal border-black border-[1px] pl-5 pt-5 h-[210px] w-[500px] rounded-lg'  placeholder='Hi; I like to ask about' />
                         </div>
                         <div>
-                            <button type='submit' className='w-[230px] h-[48px] border-black border-[1px] rounded-xl mt-10'>Submit</button>
+                            <button type='submit' className='w-[230px] h-[48px] border-black border-[2px] rounded-xl mt-10'>Submit</button>
                         </div>
                     </form>
                 </div>
