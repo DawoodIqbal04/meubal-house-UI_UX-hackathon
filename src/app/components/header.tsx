@@ -1,12 +1,20 @@
-import React from "react";
+"use client"
+
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import CartModel from "./CartModel";
 import { IoPersonOutline } from "react-icons/io5";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoHeartOutline } from "react-icons/io5";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
 const Header = (props: { bgcolor: string; }) => {
+
+  const [isCartOpen, setIsCartOpen] = useState(false)
+
+
+
   return (
     <div className={`h-[100px] w-full bg-[${props.bgcolor}] flex items-center justify-around`}>
       <div className="flex items-center">
@@ -35,7 +43,7 @@ const Header = (props: { bgcolor: string; }) => {
         </ul>
       </div>
 
-      <div className=" flex items-center justify-between gap-8">
+      <div className=" flex items-center justify-between gap-8 relative">
         <div>
           <Link href={""}>
             <IoPersonOutline size={25} />
@@ -52,11 +60,12 @@ const Header = (props: { bgcolor: string; }) => {
           </Link>
         </div>
         <div className="relative">
-          <Link href={""}>
-            <AiOutlineShoppingCart size={25} />
-          </Link>
-          <div className="flex items-center justify-center absolute w-[18px] h-[18px] top-[-20%] right-[-20%] rounded-full text-white text-[13px] bg-red-500 cursor-pointer">
-            <span>1</span>
+          <div>
+            <div className="flex items-center justify-center absolute w-[18px] h-[18px] top-[-20%] right-[-20%] rounded-full text-white text-[13px] bg-red-500 cursor-pointer">
+              <span>1</span>
+            </div>
+            <AiOutlineShoppingCart size={25} cursor={"pointer"} onClick={()=>setIsCartOpen((prev)=>!prev)}/>
+              {isCartOpen && (<CartModel />)}
           </div>
         </div>
       </div>
