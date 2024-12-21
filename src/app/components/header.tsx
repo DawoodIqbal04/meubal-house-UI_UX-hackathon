@@ -35,7 +35,7 @@ const Header = (props: { bgcolor: string; }) => {
             <Link href={"/shop"}>Shop</Link>
           </li>
           <li>
-            <Link href={""}>About</Link>
+            <Link href={"/about"}>About</Link>
           </li>
           <li>
             <Link href={"/contact"}>Contact</Link>
@@ -45,7 +45,7 @@ const Header = (props: { bgcolor: string; }) => {
 
       <div className=" flex items-center justify-between gap-8 relative">
         <div>
-          <Link href={""}>
+          <Link href={"/account"}>
             <IoPersonOutline size={25} />
           </Link>
         </div>
