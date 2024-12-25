@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { MdCancel } from "react-icons/md";
+import Link from 'next/link';
 
 
 const CartModel = () => {
@@ -26,8 +27,8 @@ const CartModel = () => {
                     <div><span className='text-base font-extrabold text-[#B88E2F]'>RS. 250000</span></div>
                 </div>
                 <div className='flex items-center justify-around mt-10'>
-                    <div className='flex items-center justify-center w-[130px] h-[30px] border-black border-[1px] rounded-3xl'><button>View Cart</button></div>
-                    <div className='flex items-center justify-center w-[130px] h-[30px] border-black border-[1px] rounded-3xl'><button>CheckOut</button></div>
+                    <div className='flex items-center justify-center w-[130px] h-[30px] border-black border-[1px] rounded-3xl'><Link href={"/cart"}>View Cart</Link></div>
+                    <div className='flex items-center justify-center w-[130px] h-[30px] border-black border-[1px] rounded-3xl'><Link href={"/checkout"}>CheckOut</Link></div>
                 </div>
             </div>
         </div>
