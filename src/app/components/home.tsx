@@ -4,6 +4,7 @@ import Hero from './hero'
 import ProductCard from './productCard'
 import BlogCard from './blogCard'
 import Header from "./header";
+import Link from 'next/link'
 
 const HomePage = () => {
   return (
@@ -82,7 +83,7 @@ const HomePage = () => {
       </div>
 
       <div className='text-center'>
-        <button className=' w-[150px] h-[49px] border-black border-b-2 font-medium text-center text-xl'>View All Posts</button>
+        <Link href={'/blogs'}><p className=' w-[150px] h-[49px] border-black border-b-2 font-medium text-center text-xl'>View All Posts</p></Link>
       </div>
 
     </div>

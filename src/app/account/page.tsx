@@ -1,24 +1,16 @@
 import React from "react";
 import Header from "../components/header";
-import Image from "next/image";
 import ShopInfo from "../components/ShopInfo";
+import PageToper from "../components/PageToper";
 
 const page = () => {
   return (
     <div>
-      <Header bgcolor="white" />
-      <div
-        style={{ backgroundImage: `url("/shopbg.png")` }}
-        className=" w-full h-[315px] flex items-center justify-center"
-      >
-        <div className="flex flex-col items-center justify-center">
-          <div>
-            <Image src={"/Logo.png"} alt="Logo" width={77} height={77}></Image>
-          </div>
-          <div className=" text-5xl font-medium">
-            <p>My Account</p>
-          </div>
-        </div>
+      <div>
+        <Header bgcolor="white" />
+      </div>
+      <div>
+        <PageToper name="My Account" />
       </div>
       <div className="w-full h-[100vh] bg-white">
         <div className="min-h-screen flex items-center justify-center">
@@ -72,7 +64,10 @@ const page = () => {
                 >
                   Log In
                 </button>
-                <a href="#" className="text-sm w-max text-indigo-500 mt-4 block hover:underline">
+                <a
+                  href="#"
+                  className="text-sm w-max text-indigo-500 mt-4 block hover:underline"
+                >
                   Lost Your Password?
                 </a>
               </form>

@@ -2,24 +2,17 @@ import Image from "next/image";
 import React from "react";
 import Header from "../components/header";
 import ShopInfo from "../components/ShopInfo";
+import PageToper from "../components/PageToper";
 
 const page = () => {
   return (
     <div>
-        <Header bgcolor="white"/>
-        <div
-                style={{ backgroundImage: `url("/shopbg.png")` }}
-                className=" w-full h-[315px] flex items-center justify-center"
-              >
-                <div className="flex flex-col items-center justify-center">
-                  <div>
-                    <Image src={"/Logo.png"} alt="Logo" width={77} height={77}></Image>
-                  </div>
-                  <div className=" text-5xl font-medium">
-                    <p>Cart</p>
-                  </div>
-                </div>
-              </div>
+      <div>
+        <Header bgcolor="white" />
+      </div>
+      <div>
+        <PageToper name="Cart" />
+      </div>
       <div className="min-h-[500px] flex justify-center items-start pt-16 p-6">
         <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Cart Items Section */}

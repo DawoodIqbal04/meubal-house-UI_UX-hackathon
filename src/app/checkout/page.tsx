@@ -1,6 +1,6 @@
 import React from "react";
-import Image from "next/image";
 import Header from "../components/header";
+import PageToper from "../components/PageToper";
 
 const page = () => {
   return (
@@ -8,20 +8,9 @@ const page = () => {
       <div>
         <Header bgcolor="white" />
       </div>
-      <div
-        style={{ backgroundImage: `url("/shopbg.png")` }}
-        className=" w-full h-[315px] flex items-center justify-center"
-      >
-        <div className="flex flex-col items-center justify-center">
-          <div>
-            <Image src={"/Logo.png"} alt="Logo" width={77} height={77}></Image>
-          </div>
-          <div className=" text-5xl font-medium">
-            <p>Checkout</p>
-          </div>
-        </div>
+      <div>
+        <PageToper name="Checkout" />
       </div>
-
       <div className="min-h-screen flex items-center justify-around pt-10 px-10 bg-white">
         <div className="w-full flex items-start justify-around  bg-white rounded-md p-8 md:flex">
           <div className="w-2/5">

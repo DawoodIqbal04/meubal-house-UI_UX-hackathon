@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import {Poppins} from "next/font/google";
+import { Poppins } from "next/font/google";
 import Footer from "./components/footer";
 
 const poppins = Poppins({
   weight: ["200", "400", "500", "700", "900"],
-  subsets: ["latin"]
-})
-
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Meubal House",
