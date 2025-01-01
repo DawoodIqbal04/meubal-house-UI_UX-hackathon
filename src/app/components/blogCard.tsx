@@ -9,8 +9,8 @@ const BlogCard = (props: {
   title: string;
 }) => {
   return (
-    <div className="w-[360px] h-[510px]">
-      <div className=" w-full h-[350px] rounded-lg">
+    <div className="lg:w-[360px] md:w-[300px] xs:w-[300px] lg:h-[510px] md:h-[450px] xs:h-[350px]">
+      <div className=" w-full lg:h-[350px] xs:h-[300px] rounded-lg">
         <Image
           src={props.imageUrl}
           alt={props.title}
@@ -19,13 +19,13 @@ const BlogCard = (props: {
           className=" object-cover"
         ></Image>
       </div>
-      <div className="flex flex-col items-center justify-center gap-2 mt-10">
-        <p className="font-normal text-xl">{props.title}</p>
-        <button className=" w-[130px] h-[40px] border-black border-b-2 font-medium text-2xl">
+      <div className="flex flex-col items-center justify-center lg:gap-2 md:gap-3 xs:gap-1 lg:mt-10 md:mt-5 xs:mt-4">
+        <p className="lg:font-normal xs:font-medium lg:text-xl xs:text-base xs:text-center">{props.title}</p>
+        <button className=" lg:w-[130px] md:w-max lg:h-[40px] md:h-[30px] border-black border-b-2 font-medium lg:text-2xl md:text-xl">
           Read More
         </button>
-        <div className=" flex items-center justify-center gap-2 mt-1 font-light text-base">
-          <div className=" flex items-center gap-3 ">
+        <div className=" flex items-center justify-center gap-2 mt-1 font-light lg:text-base md:text-sm">
+          <div className=" flex items-center gap-1 ">
             <HiOutlineClock />
             <p>5 min</p>
           </div>
