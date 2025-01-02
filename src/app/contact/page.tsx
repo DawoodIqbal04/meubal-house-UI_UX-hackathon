@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import Header from "../components/header";
 import ShopInfo from "../components/ShopInfo";
 import { MdLocationPin } from "react-icons/md";
