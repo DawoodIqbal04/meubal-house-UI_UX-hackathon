@@ -5,7 +5,7 @@ import PageToper from "../components/PageToper";
 
 const page = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <div>
         <Header bgcolor="white" />
       </div>
@@ -15,10 +15,10 @@ const page = () => {
       <div className="bg-white min-h-screen">
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <p className="text-4xl font-bold text-gray-900 sm:text-5xl">
+            <p className="lg:text-5xl md:text-4xl font-bold text-gray-900 xs:text-3xl">
               About Us
             </p>
-            <p className="mt-4 text-lg leading-6 text-center text-gray-600">
+            <p className="mt-4 md:text-lg xs:text-base leading-6 text-center text-gray-600">
               Welcome to our furniture store, where comfort meets style. <br />
               We are passionate about creating spaces <br />
               that inspire and feel like home.

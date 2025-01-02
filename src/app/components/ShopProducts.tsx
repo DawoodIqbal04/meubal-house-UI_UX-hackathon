@@ -141,7 +141,7 @@ const ShopProducts = () => {
   ];
 
   return (
-    <div className="bg-white">
+    <div className="bg-white overflow-x-hidden">
       <div className=" min-h-[300vh] w-full flex items-start justify-center gap-10 px-12 flex-wrap">
         {products.map((product, index) => (
           <Link
@@ -165,16 +165,16 @@ const ShopProducts = () => {
         ))}
       </div>
       <div className="flex items-center justify-center gap-5 my-20">
-        <div className="flex items-center justify-center w-[60px] h-[60px] rounded-[10px] cursor-pointer bg-[#FBEBB5]">
+        <div className="flex items-center justify-center md:w-[60px] xs:w-[40px] md:h-[60px] xs:h-[40px] rounded-[10px] cursor-pointer bg-[#FBEBB5]">
           <span>1</span>
         </div>
-        <div className="flex items-center justify-center w-[60px] h-[60px] rounded-[10px] cursor-pointer bg-[#FFF9E5]">
+        <div className="flex items-center justify-center md:w-[60px] xs:w-[40px] md:h-[60px] xs:h-[40px] rounded-[10px] cursor-pointer bg-[#FFF9E5]">
           <span>2</span>
         </div>
-        <div className="flex items-center justify-center w-[60px] h-[60px] rounded-[10px] cursor-pointer bg-[#FFF9E5]">
+        <div className="flex items-center justify-center md:w-[60px] xs:w-[40px] md:h-[60px] xs:h-[40px] rounded-[10px] cursor-pointer bg-[#FFF9E5]">
           <span>3</span>
         </div>
-        <div className="flex items-center justify-center w-[100px] h-[60px] rounded-[10px] cursor-pointer bg-[#FFF9E5]">
+        <div className="flex items-center justify-center md:w-[100px] xs:w-[70px] md:h-[60px] xs:h-[40px] rounded-[10px] cursor-pointer bg-[#FFF9E5]">
           <span>Next</span>
         </div>
       </div>

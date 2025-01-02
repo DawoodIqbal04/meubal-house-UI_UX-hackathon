@@ -162,7 +162,7 @@ const SingleProductPage = ({ params }: { params: Params }) => {
   }
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <div>
         <Header bgcolor="white" />
       </div>

@@ -55,8 +55,8 @@ const HomePage = () => {
 
     </div>
 
-    <div className='w-full lg:h-[550px] md:h-[80vh] xs:h-[100vh] flex md:flex-row xs:flex-col items-center md:justify-between xs:justify-around bg-[#FFF9E5]'>
-      <div className='lg:w-[65vw] md:w-[55vw] xs:w-[100vw]'>
+    <div className='w-full lg:h-[550px] md:h-[80vh] xs:h-[90vh] md:pb-0 xs:pb-5 flex md:flex-row xs:flex-col items-center md:justify-between xs:justify-around bg-[#FFF9E5]'>
+      <div className='lg:w-[65vw] md:w-[55vw] xs:w-[105vw]'>
         <Image src={"/asgaardsofa.png"} alt='assgardsofa' width={800} height={0}></Image>
       </div>
       <div className=' flex flex-col items-center justify-between md:mr-10 text-center md:gap-10 xs:gap-6'>
@@ -88,15 +88,15 @@ const HomePage = () => {
 
     </div>
 
-    <div className=' w-full lg:h-[395px] md:h-[300px] bg-cover bg-center flex items-center justify-center' style={{backgroundImage: `url("instabg.png")`}}>
+    <div className=' w-full lg:h-[395px] md:h-[300px] xs:h-[50vh] bg-cover bg-center flex items-center justify-center' style={{backgroundImage: `url("instabg.png")`}}>
       
       <div className='flex flex-col items-center justify-between gap-5'>
         <div className=' flex flex-col items-center gap-5'> 
-          <p className='font-bold lg:text-6xl md:text-5xl'>Our Instagram</p>
-          <p className='font-normal lg:text-xl md:text-lg'>Follow Our Store On Instagram</p>
+          <p className='font-bold lg:text-6xl md:text-5xl xs:text-4xl'>Our Instagram</p>
+          <p className='font-normal lg:text-xl md:text-lg xs:text-lg'>Follow Our Store On Instagram</p>
         </div>
         <div>
-          <button className=' lg:w-[250px] md:w-[200px] lg:h-[60px] md:h-[50px] bg-[#FAF4F4] rounded-full drop-shadow-2xl'>Follow Us</button>
+          <button className=' lg:w-[250px] md:w-[200px] xs:w-[150px] lg:h-[60px] md:h-[50px] xs:h-[40px] bg-[#FAF4F4] rounded-full drop-shadow-2xl'>Follow Us</button>
         </div>
       </div>
     </div> 

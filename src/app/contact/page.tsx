@@ -5,35 +5,29 @@ import ShopInfo from "../components/ShopInfo";
 import { MdLocationPin } from "react-icons/md";
 import { MdLocalPhone } from "react-icons/md";
 import { BsClockFill } from "react-icons/bs";
+import PageToper from "../components/PageToper";
 
 const page = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
+      <div>
       <Header bgcolor={"white"} />
-      <div
-        style={{ backgroundImage: `url("/shopbg.png")` }}
-        className=" w-full h-[315px] flex items-center justify-center"
-      >
-        <div className="flex flex-col items-center justify-center">
-          <div>
-            <Image src={"/Logo.png"} alt="Logo" width={77} height={77}></Image>
-          </div>
-          <div className=" text-5xl font-medium">
-            <p>Contact</p>
-          </div>
-        </div>
       </div>
-      <div className="w-full min-h-[150vh] flex flex-col items-center justify-around py-20">
+      <div>
+        <PageToper name="Contact"/>
+      </div>
+      
+      <div className="w-full min-h-[150vh] flex flex-col items-center justify-around lg:py-20 md:py-16 xs:py-10">
         <div className="w-[650px] text-center flex flex-col gap-3">
-          <p className="text-4xl font-semibold">Get In Touch With Us</p>
-          <p className="text-base font-normal text-[#9f9f9f]">
-            For More Information About Our Product & Services. Please Feel Free
-            To Drop Us An Email. Our Staff Always Be There To Help You Out. Do
+          <p className="md:text-4xl xs:text-2xl font-semibold">Get In Touch With Us</p>
+          <p className="md:text-base xs:text-xs font-normal text-[#9f9f9f]">
+            For More Information About Our Product & Services.<br /> Please Feel Free
+            To Drop Us An Email.<br /> Our Staff Always Be There To Help You Out.<br /> Do
             Not Hesitate!
           </p>
         </div>
-        <div className="w-full flex items-start mt-20 justify-evenly">
-          <div className="flex flex-col gap-10">
+        <div className="w-full flex lg:flex-row xs:flex-col lg:items-start xs:items-center mt-20 justify-evenly">
+          <div className="flex flex-col gap-10 xs:pb-20">
             <div className="flex items-start w-[245px] gap-6">
               <div>
                 <MdLocationPin size={28} />
@@ -78,7 +72,7 @@ const page = () => {
             </div>
           </div>
 
-          <div className="flex items-center justify-center w-[630px] min-h-[100vh]">
+          <div className="flex items-center justify-center md:w-[630px] xs:w-[100vw] min-h-[100vh]">
             <form className="flex flex-col gap-7">
               <div className="flex flex-col items-start text-base gap-5">
                 <label className="font-medium" htmlFor="">
@@ -86,7 +80,7 @@ const page = () => {
                 </label>
                 <input
                   type="text"
-                  className="font-normal border-black border-[1px] pl-5 h-[70px] w-[500px] rounded-lg"
+                  className="font-normal border-black border-[1px] pl-5 h-[70px] md:w-[500px] xs:w-[90vw] rounded-lg"
                   placeholder="John Fernandes"
                 />
               </div>
@@ -96,7 +90,7 @@ const page = () => {
                 </label>
                 <input
                   type="text"
-                  className="font-normal border-black border-[1px] pl-5 h-[70px] w-[500px] rounded-lg"
+                  className="font-normal border-black border-[1px] pl-5 h-[70px] md:w-[500px] xs:w-[90vw] rounded-lg"
                   placeholder="j.fernandes@gmail.com"
                 />
               </div>
@@ -106,7 +100,7 @@ const page = () => {
                 </label>
                 <input
                   type="text"
-                  className="font-normal border-black border-[1px] pl-5 h-[70px] w-[500px] rounded-lg"
+                  className="font-normal border-black border-[1px] pl-5 h-[70px] md:w-[500px] xs:w-[90vw] rounded-lg"
                   placeholder="contact"
                 />
               </div>
@@ -115,14 +109,14 @@ const page = () => {
                   Massege
                 </label>
                 <textarea
-                  className="font-normal border-black border-[1px] pl-5 pt-5 h-[210px] w-[500px] rounded-lg"
+                  className="font-normal border-black border-[1px] pl-5 pt-5 h-[210px] md:w-[500px] xs:w-[90vw] rounded-lg"
                   placeholder="Hi; I like to ask about"
                 />
               </div>
               <div>
                 <button
                   type="submit"
-                  className="w-[230px] h-[48px] border-black border-[2px] rounded-xl mt-10"
+                  className="w-[230px] h-[48px] transition-all border-black border rounded-xl mt-10 hover:bg-indigo-500 hover:text-white hover:border-none "
                 >
                   Submit
                 </button>

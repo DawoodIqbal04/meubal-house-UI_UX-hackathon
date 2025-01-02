@@ -5,14 +5,14 @@ import PageToper from "../components/PageToper";
 
 const page = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <div>
         <Header bgcolor="white" />
       </div>
       <div>
         <PageToper name="My Account" />
       </div>
-      <div className="w-full h-[100vh] bg-white">
+      <div className="w-full min-h-[100vh] bg-white">
         <div className="min-h-screen flex items-center justify-center">
           <div className="bg-white rounded-lg w-full max-w-4xl p-8 grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Login Section */}
@@ -29,7 +29,7 @@ const page = () => {
                   <input
                     type="text"
                     id="login-email"
-                    className="mt-1 block w-4/5 p-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    className="mt-1 block w-4/5 p-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 focus:outline-none sm:text-sm"
                   />
                 </div>
                 <div className="mb-4">
@@ -42,14 +42,14 @@ const page = () => {
                   <input
                     type="password"
                     id="login-password"
-                    className="mt-1 block w-4/5 p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    className="mt-1 block w-4/5 p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:outline-none focus:border-indigo-500 sm:text-sm"
                   />
                 </div>
                 <div className="flex items-center mb-4">
                   <input
                     type="checkbox"
                     id="remember-me"
-                    className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
+                    className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 focus:outline-none border-gray-300 rounded"
                   />
                   <label
                     htmlFor="remember-me"
@@ -60,7 +60,7 @@ const page = () => {
                 </div>
                 <button
                   type="submit"
-                  className=" w-4/5 bg-white text-indigo-500 border-gray-300 border py-2 rounded-md text-sm font-medium hover:bg-indigo-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  className=" transition-all w-4/5 bg-white text-indigo-500 border-gray-300 border py-2 rounded-md text-sm font-medium hover:bg-indigo-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
                   Log In
                 </button>
@@ -87,7 +87,7 @@ const page = () => {
                   <input
                     type="email"
                     id="register-email"
-                    className="mt-1 block w-4/5 p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    className="mt-1 block w-4/5 p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:outline-none focus:border-indigo-500 sm:text-sm"
                   />
                 </div>
                 <p className="text-sm text-gray-500 mb-4">
@@ -96,7 +96,7 @@ const page = () => {
                 </p>
                 <button
                   type="submit"
-                  className=" w-4/5 bg-white text-indigo-500 border border-gray-300 py-2 rounded-md text-sm font-medium hover:bg-indigo-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  className=" transition-all w-4/5 bg-white text-indigo-500 border border-gray-300 py-2 rounded-md text-sm font-medium hover:bg-indigo-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
                   Register
                 </button>

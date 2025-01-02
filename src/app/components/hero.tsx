@@ -4,7 +4,7 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <div className=" w-full md:w-[100vw] xs:w-[100vw] lg:h-[calc(100vh-100px)] md:h-[calc(100vh-80px)] xs:h-[calc(100vh-60px)] flex md:flex-row-reverse xs:flex-col items-center md:justify-between xs:justify-center lg:pr-20 lg:pl-24 md:pr-10 md:pl-12 font-medium bg-[#FBEBB5]">
-      <div className="md:w-[510px] xs:w-[280px]">
+      <div className="md:w-[510px] xs:w-[320px]">
         <Image
           src={"/heroimage.png"}
           height={0}

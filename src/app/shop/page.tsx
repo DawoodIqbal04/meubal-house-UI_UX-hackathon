@@ -5,7 +5,7 @@ import ShopInfo from "../components/ShopInfo";
 
 const page = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Header bgcolor={"white"} />
       <ShopPage />
       <ShopInfo />

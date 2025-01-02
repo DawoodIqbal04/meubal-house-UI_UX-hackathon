@@ -4,7 +4,7 @@ import PageToper from "../components/PageToper";
 
 const page = () => {
   return (
-    <div>
+    <div className=" overflow-x-hidden">
       <div>
         <Header bgcolor="white" />
       </div>
@@ -12,9 +12,9 @@ const page = () => {
         <PageToper name="Checkout" />
       </div>
       <div className="min-h-screen flex items-center justify-around pt-10 px-10 bg-white">
-        <div className="w-full flex items-start justify-around  bg-white rounded-md p-8 md:flex">
-          <div className="w-2/5">
-            <p className="text-xl font-bold mb-6">Billing details</p>
+        <div className="w-full flex md:flex-row xs:flex-col md:items-start xs:items-center justify-around  bg-white rounded-md p-8 md:flex">
+          <div className="md:w-2/5 xs:w-[140%]">
+            <p className="md:text-xl xs:text-2xl font-bold mb-6">Billing details</p>
             <form className="space-y-4">
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
@@ -133,8 +133,8 @@ const page = () => {
             </form>
           </div>
 
-          <div className="w-2/5 mt-8 md:mt-0 md:ml-8">
-            <p className="text-xl font-bold mb-6">Product</p>
+          <div className="md:w-2/5 xs:w-[140%] mt-20 md:mt-0 md:ml-8">
+            <p className="md:text-xl xs:text-2xl font-bold mb-6">Product</p>
             <div className="space-y-4">
               <div className="flex justify-between">
                 <span className="font-medium">
