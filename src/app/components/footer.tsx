@@ -74,8 +74,8 @@ const Footer = () => {
             <p>www.meubelhouse.com</p>
             <p>bussiness.meubelhouse@gmail.com</p>
           </div>
-        <div className=" flex lg:items-end md:items-center xs:items-center lg:h-[59px] md:h-[69px] xs:h-[30px] w-full border-t-[1px] font-normal md:text-base xs:text-sm border-[#9f9f9f]">
-          <p>© 2024 Meubel House. All rights reverved</p>
+        <div className=" flex lg:items-end md:items-center xs:items-center lg:h-[59px] md:h-[69px] xs:h-[50px] w-full border-t-[1px] font-normal md:text-base xs:text-xs border-[#9f9f9f]">
+          <p>Developed With ❤ By MUHAMMAD DAWOOD IQBAL</p>
         </div>
       </div>
     </div>
