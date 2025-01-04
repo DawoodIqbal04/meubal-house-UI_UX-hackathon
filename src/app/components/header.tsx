@@ -30,17 +30,17 @@ const Header = (props: { bgcolor: string }) => {
       </div>
 
       <div className="lg:flex md:flex xs:hidden">
-        <ul className="flex items-center lg:gap-12 md:gap-6 font-medium lg:text-base md:text-sm">
-          <li>
+        <ul className="flex items-center lg:gap-12 md:gap-6 font-medium lg:text-base md:text-sm navlinks">
+          <li className="relative">
             <Link href={"/"}>Home</Link>
           </li>
-          <li>
+          <li className="relative">
             <Link href={"/shop"}>Shop</Link>
           </li>
-          <li>
+          <li className="relative">
             <Link href={"/about"}>About</Link>
           </li>
-          <li>
+          <li className="relative">
             <Link href={"/contact"}>Contact</Link>
           </li>
         </ul>

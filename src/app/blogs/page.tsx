@@ -18,10 +18,10 @@ const page = () => {
       <div>
         <PageToper name="Blogs" />
       </div>
-      <div className="w-full flex items-start justify-between gap-16 py-10 pt-20 px-20">
-        <div className="flex flex-col items-start justify-between gap-10">
+      <div className="w-full flex lg:flex-row xs:flex-col-reverse items-start justify-between gap-16 py-10 lg:pt-20 lg:px-20 md:px-10 xs:px-4">
+        <div className="flex flex-col items-start justify-between lg:gap-10 md:gap-20 xs:gap-10">
           {/* Post 1 */}
-          <div className="bg-white flex flex-col items-start justify-between w-[750px] h-[650px] rounded-lg overflow-hidden">
+          <div className="bg-white flex flex-col items-start justify-between lg:w-[750px] xs:w-[90vw] lg:h-[650px] xs:h-[100vh] rounded-lg overflow-hidden">
             <div className="relative w-full h-[400px]">
               <Image
                 src="/bpage1.png"
@@ -30,32 +30,32 @@ const page = () => {
                 objectFit="cover"
               />
             </div>
-            <div className="p-5 w-full h-[250px] flex flex-col items-start justify-between">
-              <div className="flex items-center gap-5 text-base text-gray-400">
-                <div className="flex items-center gap-3">
+            <div className="md:p-5 xs:pt-3 w-full h-[250px] flex flex-col items-start justify-between">
+              <div className=" flex items-center md:gap-5 xs:gap-7 md:text-base xs:text-xs text-gray-400">
+                <div className="flex items-center md:gap-3 xs:gap-2">
                   <FaUser />
                   <p>Adimin</p>
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center md:gap-3 xs:gap-2">
                   <IoCalendarClear />
                   <p>14 Oct 2022</p>
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center md:gap-3 xs:gap-2">
                   <FaTag />
                   <p>Handmade</p>
                 </div>
               </div>
-              <p className="text-[25px] font-medium mb-2">
+              <p className="md:text-[25px] xs:text-lg font-medium mb-2">
                 Going all-in with millennial design
               </p>
-              <p className="text-gray-600 text-sm mb-4">
+              <p className="text-gray-600 md:text-sm xs:text-xs md:mb-4 xs:mb-2">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Inventore aut, dignissimos similique cumque omnis expedita nemo
                 eius, quo sed, doloribus est sunt! Quod cupiditate optio
                 corporis illo necessitatibus, alias impedit?
               </p>
               <div className="flex justify-between items-center">
-                <button className="text-blue-500 font-semibold hover:underline">
+                <button className="text-blue-500 md:text-base xs:text-sm font-semibold hover:underline">
                   Read more
                 </button>
               </div>
@@ -63,41 +63,41 @@ const page = () => {
           </div>
 
           {/* Post 2 */}
-          <div className="bg-white flex flex-col items-start justify-between w-[750px] h-[650px] rounded-lg overflow-hidden">
+          <div className="bg-white flex flex-col items-start justify-between lg:w-[750px] xs:w-[90vw] lg:h-[650px] xs:h-[100vh] rounded-lg overflow-hidden">
             <div className="relative w-full h-[400px]">
               <Image
                 src="/bpage2.png"
-                alt="Exploring Decorating"
+                alt="Millennial Design"
                 fill
                 objectFit="cover"
               />
             </div>
-            <div className="p-5 w-full h-[250px] flex flex-col items-start justify-between">
-              <div className="flex items-center gap-5 text-base text-gray-400">
-                <div className="flex items-center gap-3">
+            <div className="md:p-5 xs:pt-3 w-full h-[250px] flex flex-col items-start justify-between">
+              <div className=" flex items-center md:gap-5 xs:gap-7 md:text-base xs:text-xs text-gray-400">
+                <div className="flex items-center md:gap-3 xs:gap-2">
                   <FaUser />
-                  <p>Admin</p>
+                  <p>Adimin</p>
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center md:gap-3 xs:gap-2">
                   <IoCalendarClear />
                   <p>14 Oct 2022</p>
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center md:gap-3 xs:gap-2">
                   <FaTag />
                   <p>Handmade</p>
                 </div>
               </div>
-              <p className="text-[25px] font-medium mb-2">
-                Exploring new ways of decorating
+              <p className="md:text-[25px] xs:text-lg font-medium mb-2">
+                Going all-in with millennial design
               </p>
-              <p className="text-gray-600 text-sm mb-4">
+              <p className="text-gray-600 md:text-sm xs:text-xs md:mb-4 xs:mb-2">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Inventore aut, dignissimos similique cumque omnis expedita nemo
                 eius, quo sed, doloribus est sunt! Quod cupiditate optio
                 corporis illo necessitatibus, alias impedit?
               </p>
               <div className="flex justify-between items-center">
-                <button className="text-blue-500 font-semibold hover:underline">
+                <button className="text-blue-500 md:text-base xs:text-sm font-semibold hover:underline">
                   Read more
                 </button>
               </div>
@@ -105,41 +105,41 @@ const page = () => {
           </div>
 
           {/* Post 3 */}
-          <div className="bg-white flex flex-col items-start justify-between w-[750px] h-[650px] rounded-lg overflow-hidden">
+          <div className="bg-white flex flex-col items-start justify-between lg:w-[750px] xs:w-[90vw] lg:h-[650px] xs:h-[100vh] rounded-lg overflow-hidden">
             <div className="relative w-full h-[400px]">
               <Image
                 src="/bpage3.png"
-                alt="Handmade Pieces"
+                alt="Millennial Design"
                 fill
                 objectFit="cover"
               />
             </div>
-            <div className="p-5 w-full h-[250px] flex flex-col items-start justify-between">
-              <div className="flex items-center gap-5 text-base text-gray-400">
-                <div className="flex items-center gap-3">
+            <div className="md:p-5 xs:pt-3 w-full h-[250px] flex flex-col items-start justify-between">
+              <div className=" flex items-center md:gap-5 xs:gap-7 md:text-base xs:text-xs text-gray-400">
+                <div className="flex items-center md:gap-3 xs:gap-2">
                   <FaUser />
-                  <p>Admin</p>
+                  <p>Adimin</p>
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center md:gap-3 xs:gap-2">
                   <IoCalendarClear />
                   <p>14 Oct 2022</p>
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center md:gap-3 xs:gap-2">
                   <FaTag />
                   <p>Handmade</p>
                 </div>
               </div>
-              <p className="text-[25px] font-medium mb-2">
-                Handmade pieces that took time to make
+              <p className="md:text-[25px] xs:text-lg font-medium mb-2">
+                Going all-in with millennial design
               </p>
-              <p className="text-gray-600 text-sm mb-4">
+              <p className="text-gray-600 md:text-sm xs:text-xs md:mb-4 xs:mb-2">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Inventore aut, dignissimos similique cumque omnis expedita nemo
                 eius, quo sed, doloribus est sunt! Quod cupiditate optio
                 corporis illo necessitatibus, alias impedit?
               </p>
               <div className="flex justify-between items-center">
-                <button className="text-blue-500 font-semibold hover:underline">
+                <button className="text-blue-500 md:text-base xs:text-sm font-semibold hover:underline">
                   Read more
                 </button>
               </div>
@@ -147,7 +147,7 @@ const page = () => {
           </div>
         </div>
 
-        <div className="flex flex-col mt-10 gap-20">
+        <div className="flex lg:flex-col md:flex-row xs:flex-col lg:mt-10 lg:gap-20 md:gap-0 xs:gap-16 lg:pl-0 md:pl-10 xs:pl-7 ">
           {/* Categories */}
           <div className="w-[390px]">
             <div className="flex items-center gap-2 bg-white border border-gray-400 w-max p-2 rounded-md mb-8">
@@ -160,9 +160,9 @@ const page = () => {
               </button>
             </div>
             <div>
-              <p className="text-2xl font-medium mb-10">Categories</p>
+              <p className="text-2xl font-medium md:mb-10 xs:mb-6">Categories</p>
             </div>
-            <div className="space-y-2 font-normal text-base text-gray-400 flex flex-col items-start gap-10">
+            <div className="space-y-2 font-normal text-base text-gray-400 flex flex-col items-start md:gap-10 xs:gap-5">
               <div className="flex items-center justify-between w-3/5">
                 <div>Craft</div>
                 <div>2</div>
@@ -189,10 +189,10 @@ const page = () => {
           {/* Recent Posts */}
           <div className="flex flex-col items-start ">
             <div>
-              <p className="text-2xl font-medium mb-10">Recent Posts</p>
+              <p className="text-2xl font-medium md:mb-10 xs:mb-6">Recent Posts</p>
             </div>
             <div className="w-[250px] flex flex-col items-start justify-center gap-5">
-              <div className="flex flex-col gap-5">
+              <div className="flex flex-col md:gap-5 xs:gap-2">
                 <Link href={""}>
                   <div className="flex items-center gap-4">
                     <div className="flex items-center w-20 h-20">
@@ -304,19 +304,19 @@ const page = () => {
         </div>
       </div>
       {/* Pagination */}
-      <div className="flex justify-center pb-20 mt-10 gap-8">
-        <button className="px-4 py-2 w-[60px] h-[60px] bg-yellow-200 rounded-lg">
-          1
-        </button>
-        <button className="px-4 py-2 w-[60px] h-[60px] bg-yellow-100 rounded-lg">
-          2
-        </button>
-        <button className="px-4 py-2 w-[60px] h-[60px] bg-yellow-100 rounded-lg">
-          3
-        </button>
-        <button className="px-4 py-2 w-[90px] h-[60px] bg-yellow-100 rounded-lg">
-          Next
-        </button>
+      <div className="flex items-center justify-center gap-5 my-10">
+        <div className="flex items-center justify-center md:w-[60px] xs:w-[40px] md:h-[60px] xs:h-[40px] rounded-[10px] cursor-pointer bg-[#FBEBB5]">
+          <span>1</span>
+        </div>
+        <div className="flex items-center justify-center md:w-[60px] xs:w-[40px] md:h-[60px] xs:h-[40px] rounded-[10px] cursor-pointer bg-[#FFF9E5]">
+          <span>2</span>
+        </div>
+        <div className="flex items-center justify-center md:w-[60px] xs:w-[40px] md:h-[60px] xs:h-[40px] rounded-[10px] cursor-pointer bg-[#FFF9E5]">
+          <span>3</span>
+        </div>
+        <div className="flex items-center justify-center md:w-[100px] xs:w-[70px] md:h-[60px] xs:h-[40px] rounded-[10px] cursor-pointer bg-[#FFF9E5]">
+          <span>Next</span>
+        </div>
       </div>
       <div>
         <ShopInfo />

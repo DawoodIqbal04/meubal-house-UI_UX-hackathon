@@ -19,9 +19,22 @@ body {
   background: var(--background);
   font-family: Inter, Poppins;
 }
-body h1,h2,h3,h4,h5 {
-  font-family: inter;
+
+.navlinks li::after{
+  content: '';
+  position: absolute;
+  background-color: black;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  transition: all ease .3s;
 }
+
+.navlinks li:hover::after{
+  width: 100%;
+}
+
 
 @layer utilities {
   .text-balance {

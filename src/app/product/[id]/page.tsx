@@ -166,13 +166,13 @@ const SingleProductPage = ({ params }: { params: Params }) => {
       <div>
         <Header bgcolor="white" />
       </div>
-      <div className="flex items-start px-16 py-10 gap-20 w-[100%]">
-        <div className="col-span-2 flex w-1/2 gap-4">
-          <div className="flex flex-col items-start gap-8">
+      <div className="flex md:flex-row xs:flex-col items-start lg:px-16 md:px-8 xs:px-4 py-10 lg:gap-20 md:gap-10 w-[100%]">
+        <div className="flex md:flex-row xs:flex-col-reverse lg:w-1/2 md:w-[55%] xs:w-[100%] gap-4">
+          <div className="flex md:flex-col items-start lg:gap-8 md:gap-6 xs:gap-4">
             {[1, 2, 3, 4].map((i) => (
               <div
                 key={i}
-                className="bg-yellow-100 w-[90px] h-[90px] rounded-lg"
+                className="bg-yellow-100 lg:w-[90px] md:w-[60px] xs:w-max lg:h-[90px] md:h-[60px] xs:h-max rounded-lg"
               >
                 <Image
                   src={product.imageUrl}
@@ -184,7 +184,7 @@ const SingleProductPage = ({ params }: { params: Params }) => {
               </div>
             ))}
           </div>
-          <div className=" h-[500px] w-[500px] flex justify-center">
+          <div className=" lg:h-[500px] md:h-[350px] lg:w-[500px] md:w-[400px] flex justify-center">
             <Image
               src={product.imageUrl}
               alt="Asgaard Sofa"
@@ -196,12 +196,12 @@ const SingleProductPage = ({ params }: { params: Params }) => {
           </div>
         </div>
 
-        <div className="w-2/5 flex flex-col items-start gap-[10px]">
+        <div className="lg:w-2/5 md:w-[35%] md:mt-0 xs:mt-10 flex flex-col items-start gap-[10px]">
           <div>
-            <p className="text-[42px] font-medium">{product.title}</p>
+            <p className="lg:text-[42px] md:text-[35px] xs:text-[25px] font-medium">{product.title}</p>
           </div>
           <div>
-            <p className="text-xl font-bold text-gray-600">{product.price}</p>
+            <p className="lg:text-xl md:text-lg font-bold text-gray-600">{product.price}</p>
           </div>
 
           <div className="flex items-center space-x-2">
@@ -243,13 +243,13 @@ const SingleProductPage = ({ params }: { params: Params }) => {
               ].map((colorClass, index) => (
                 <div
                   key={index}
-                  className={`h-8 w-8 rounded-full border ${colorClass}`}
+                  className={`h-8 w-8 rounded-full ${colorClass}`}
                 ></div>
               ))}
             </div>
           </div>
 
-          <div className="flex items-center mt-7 space-x-4">
+          <div className="flex lg:flex-row md:flex-col lg:gap-0 md:gap-7 items-center mt-7 md:pb-0 xs:pb-10 space-x-4">
             <div className="flex items-center border rounded-lg">
               <button className="px-4 py-2">-</button>
               <span className="px-4">1</span>
@@ -260,7 +260,7 @@ const SingleProductPage = ({ params }: { params: Params }) => {
             </button>
           </div>
 
-          <div className="text-gray-500 space-y-1 mt-16 text-base font-normal border-t w-[100%] pt-5 border-black">
+          <div className="text-gray-500 space-y-1 lg:mt-16 md:mt-10 text-base font-normal border-t w-[100%] pt-5 border-black">
             <p className="flex items-center gap-3">
               <span>SKU</span>: SS001
             </p>
@@ -298,12 +298,12 @@ const SingleProductPage = ({ params }: { params: Params }) => {
       <div>
         <SingleProductBottom />
       </div>
-      <div className=" flex flex-col items-center gap-10 mt-10 w-full h-[750px] bg-white">
+      <div className="flex flex-col items-center lg:gap-10  mt-10 w-full lg:h-[750px] md:min-h-[100vh] bg-white">
         <div className="flex flex-col items-center font-medium">
-          <p className=" text-4xl">Related Products</p>
+          <p className=" lg:text-4xl md:text-3xl xs:text-2xl">Related Products</p>
         </div>
 
-        <div className="flex items-center justify-around gap-5">
+        <div className="lg:flex xs:grid md:grid-cols-2 xs:grid-cols-1  md:gap-x-28 items-center justify-around lg:gap-5">
           <ProductCard
             imageUrl="/pick1.png"
             price="RS. 25,000"
@@ -326,7 +326,7 @@ const SingleProductPage = ({ params }: { params: Params }) => {
           />
         </div>
 
-        <div className="mt-10">
+        <div className="mt-10 lg:pb-0 md:pb-10 xs:pb-5">
           <button className=" w-[115px] h-[45px] border-black border-b-2 font-medium text-center text-xl">
             View More
           </button>

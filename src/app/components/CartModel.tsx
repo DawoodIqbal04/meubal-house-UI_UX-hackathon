@@ -47,10 +47,10 @@ const CartModel = () => {
             </div>
           </div>
           <div className="flex items-center justify-around mt-10">
-            <div className="flex items-center justify-center md:w-[130px] md:h-[30px] xs:w-[100px] xs:h-[30px] border-black border-[1px] md:rounded-3xl xs:rounded-2xl">
+            <div className="flex items-center justify-center md:w-[130px] md:h-[30px] xs:w-[100px] xs:h-[30px] border-black border-[1px] md:rounded-3xl xs:rounded-2xl transition-all hover:bg-yellow-400 hover:border-none hover:text-white">
               <Link href={"/cart"}>View Cart</Link>
             </div>
-            <div className="flex items-center justify-center md:w-[130px] md:h-[30px] xs:w-[100px] xs:h-[30px] border-black border-[1px] md:rounded-3xl xs:rounded-2xl">
+            <div className="flex items-center justify-center md:w-[130px] md:h-[30px] xs:w-[100px] xs:h-[30px] border-black border-[1px] md:rounded-3xl xs:rounded-2xl transition-all hover:bg-yellow-400 hover:border-none hover:text-white">
               <Link href={"/checkout"}>CheckOut</Link>
             </div>
           </div>

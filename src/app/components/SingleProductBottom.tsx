@@ -5,9 +5,9 @@ const SingleProductBottom = () => {
   return (
     <div>
       <div className="bg-white min-h-screen border border-t-gray-400 flex flex-col items-center justify-centerf py-10">
-        <div className="max-w-5xl w-full ">
+        <div className="lg:max-w-5xl md:max-w-2xl xs:max-w-[300px] w-full ">
           <div className=" rounded-lg">
-            <nav className="flex space-x-6 items-center justify-center mb-10 text-lg font-medium">
+            <div className="flex md:space-x-6 xs:space-x-10 items-center justify-center mb-10 md:text-lg xs:text-sm font-medium">
               <a href="#" className="text-black border-b-2 border-black">
                 Description
               </a>
@@ -17,9 +17,9 @@ const SingleProductBottom = () => {
               <a href="#" className="text-gray-400">
                 Reviews [5]
               </a>
-            </nav>
+            </div>
 
-            <div className="text-left text-base">
+            <div className="text-left md:text-base xs:text-sm">
               <p className="text-gray-700 mb-6">
                 Embodying the raw, wayward spirit of rock ’n’ roll, the Kilburn
                 portable active stereo speaker takes the unmistakable look and
@@ -38,8 +38,8 @@ const SingleProductBottom = () => {
               </p>
             </div>
 
-            <div className="flex w-full justify-between gap-8 mt-8">
-              <div className=" w-[50%] bg-yellow-50 rounded-lg">
+            <div className="flex md:flex-row xs:flex-col w-full justify-between gap-8 mt-8">
+              <div className=" md:w-[50%] bg-yellow-50 rounded-lg">
                 <Image
                   src="/spsofa.png"
                   alt="Sofa design 1"
@@ -48,7 +48,7 @@ const SingleProductBottom = () => {
                   className="rounded-lg object-cover"
                 />
               </div>
-              <div className=" w-[50%] bg-yellow-50 rounded-lg">
+              <div className=" md:w-[50%] bg-yellow-50 rounded-lg">
                 <Image
                   src="/spsofa2.png"
                   alt="Sofa design 2"

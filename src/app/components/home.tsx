@@ -88,7 +88,7 @@ const HomePage = () => {
 
     </div>
 
-    <div className=' w-full lg:h-[395px] md:h-[300px] xs:h-[50vh] bg-cover bg-center flex items-center justify-center' style={{backgroundImage: `url("instabg.png")`}}>
+    <div className=' w-full lg:h-[395px] md:h-[300px] xs:h-[40vh] bg-cover bg-center flex items-center justify-center' style={{backgroundImage: `url("instabg.png")`}}>
       
       <div className='flex flex-col items-center justify-between gap-5'>
         <div className=' flex flex-col items-center gap-5'> 
