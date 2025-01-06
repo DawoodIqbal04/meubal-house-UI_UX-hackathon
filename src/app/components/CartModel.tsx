@@ -6,7 +6,7 @@ import Link from "next/link";
 const CartModel = () => {
   return (
     <div className=" absolute lg:-right-20 md:-right-8 xs:-right-4 -top-[160%] z-[99] w-[100vw] h-[711vh] bg-[#00000030]">
-      <div className="lg:w-[30vw] md:w-[50vw] xs:w-[70vw] min-h-[105vh] bg-white absolute right-0 md:p-6 xs:px-[3vw] xs:py-8">
+      <div className="lg:w-[30vw] md:w-[50vw] xs:w-[70vw] h-[103vh] bg-white absolute right-0 md:p-6 xs:px-[3vw] xs:py-8">
         <div className="lg:text-2xl md:text-xl xs:text-xl font-semibold lg:h-14 md:h-12 xs:h-10 border-gray-300 border-b-2">
           <p>Shopping Cart</p>
         </div>
@@ -35,7 +35,7 @@ const CartModel = () => {
             <MdCancel cursor={"pointer"} size={20} />
           </div>
         </div>
-        <div className=" lg:mt-60 md:mt-44 xs:mt-52 h-12 border-gray-300 border-b-2">
+        <div className=" lg:mt-60 md:mt-44 xs:mt-60 h-12 border-gray-300 border-b-2">
           <div className="flex items-center justify-between">
             <div>
               <p className="text-base font-normal">Subtotal</p>

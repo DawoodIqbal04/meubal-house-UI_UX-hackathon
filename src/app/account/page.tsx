@@ -29,7 +29,8 @@ const page = () => {
                   <input
                     type="text"
                     id="login-email"
-                    className="mt-1 block w-4/5 p-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 focus:outline-none sm:text-sm"
+                    placeholder="anyone123@gmail.com"
+                    className="mt-1 block md:w-4/5 xs:w-full p-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 focus:outline-none sm:text-sm"
                   />
                 </div>
                 <div className="mb-4">
@@ -42,7 +43,8 @@ const page = () => {
                   <input
                     type="password"
                     id="login-password"
-                    className="mt-1 block w-4/5 p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:outline-none focus:border-indigo-500 sm:text-sm"
+                    placeholder="*******"
+                    className="mt-1 block md:w-4/5 xs:w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:outline-none focus:border-indigo-500 sm:text-sm"
                   />
                 </div>
                 <div className="flex items-center mb-4">
@@ -87,7 +89,8 @@ const page = () => {
                   <input
                     type="email"
                     id="register-email"
-                    className="mt-1 block w-4/5 p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:outline-none focus:border-indigo-500 sm:text-sm"
+                    placeholder="anyone123@gmail.com"
+                    className="mt-1 block md:w-4/5 xs:w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:outline-none focus:border-indigo-500 sm:text-sm"
                   />
                 </div>
                 <p className="text-sm text-gray-500 mb-4">

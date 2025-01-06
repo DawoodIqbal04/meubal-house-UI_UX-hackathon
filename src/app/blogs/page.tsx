@@ -21,7 +21,7 @@ const page = () => {
       <div className="w-full flex lg:flex-row xs:flex-col-reverse items-start justify-between gap-16 py-10 lg:pt-20 lg:px-20 md:px-10 xs:px-4">
         <div className="flex flex-col items-start justify-between lg:gap-10 md:gap-20 xs:gap-10">
           {/* Post 1 */}
-          <div className="bg-white flex flex-col items-start justify-between lg:w-[750px] xs:w-[90vw] lg:h-[650px] xs:h-[100vh] rounded-lg overflow-hidden">
+          <div className="bg-white flex flex-col items-start justify-between lg:w-[750px] xs:w-full lg:h-[650px] xs:h-[88vh] rounded-lg overflow-hidden">
             <div className="relative w-full h-[400px]">
               <Image
                 src="/bpage1.png"
@@ -30,7 +30,7 @@ const page = () => {
                 objectFit="cover"
               />
             </div>
-            <div className="md:p-5 xs:pt-3 w-full h-[250px] flex flex-col items-start justify-between">
+            <div className="md:p-5 w-full h-[250px] flex flex-col items-start md:gap-0 xs:gap-3 md:justify-between">
               <div className=" flex items-center md:gap-5 xs:gap-7 md:text-base xs:text-xs text-gray-400">
                 <div className="flex items-center md:gap-3 xs:gap-2">
                   <FaUser />
@@ -63,7 +63,7 @@ const page = () => {
           </div>
 
           {/* Post 2 */}
-          <div className="bg-white flex flex-col items-start justify-between lg:w-[750px] xs:w-[90vw] lg:h-[650px] xs:h-[100vh] rounded-lg overflow-hidden">
+          <div className="bg-white flex flex-col items-start justify-between lg:w-[750px] xs:w-100% lg:h-[650px] xs:h-[88vh] rounded-lg overflow-hidden">
             <div className="relative w-full h-[400px]">
               <Image
                 src="/bpage2.png"
@@ -72,7 +72,7 @@ const page = () => {
                 objectFit="cover"
               />
             </div>
-            <div className="md:p-5 xs:pt-3 w-full h-[250px] flex flex-col items-start justify-between">
+            <div className="md:p-5 w-full h-[250px] flex flex-col items-start md:gap-0 xs:gap-3 md:justify-between">
               <div className=" flex items-center md:gap-5 xs:gap-7 md:text-base xs:text-xs text-gray-400">
                 <div className="flex items-center md:gap-3 xs:gap-2">
                   <FaUser />
@@ -105,7 +105,7 @@ const page = () => {
           </div>
 
           {/* Post 3 */}
-          <div className="bg-white flex flex-col items-start justify-between lg:w-[750px] xs:w-[90vw] lg:h-[650px] xs:h-[100vh] rounded-lg overflow-hidden">
+          <div className="bg-white flex flex-col items-start justify-between lg:w-[750px] xs:100% lg:h-[650px] xs:h-[88vh] rounded-lg overflow-hidden">
             <div className="relative w-full h-[400px]">
               <Image
                 src="/bpage3.png"
@@ -114,7 +114,7 @@ const page = () => {
                 objectFit="cover"
               />
             </div>
-            <div className="md:p-5 xs:pt-3 w-full h-[250px] flex flex-col items-start justify-between">
+            <div className="md:p-5 w-full h-[250px] flex flex-col items-start md:gap-0 xs:gap-3 md:justify-between">
               <div className=" flex items-center md:gap-5 xs:gap-7 md:text-base xs:text-xs text-gray-400">
                 <div className="flex items-center md:gap-3 xs:gap-2">
                   <FaUser />
