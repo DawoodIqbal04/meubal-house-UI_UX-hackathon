@@ -10,7 +10,7 @@ const HomePage = () => {
   return (
     <div className="overflow-x-hidden">
       <div>
-        <Header bgcolor={"#FBEB◘B5"} />
+        <Header bgcolor={"#FBEBB5"} />
       </div>
       <div>
         <Hero />
