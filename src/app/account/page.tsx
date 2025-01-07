@@ -15,7 +15,6 @@ const page = () => {
       <div className="w-full min-h-[100vh] bg-white">
         <div className="min-h-screen flex items-center justify-center">
           <div className="bg-white rounded-lg w-full max-w-4xl p-8 grid grid-cols-1 md:grid-cols-2 gap-12">
-            {/* Login Section */}
             <div className="flex flex-col">
               <p className="text-xl font-semibold mb-6">Log In</p>
               <form>
@@ -75,7 +74,6 @@ const page = () => {
               </form>
             </div>
 
-            {/* Register Section */}
             <div className="flex flex-col">
               <p className="text-xl font-semibold mb-6">Register</p>
               <form>

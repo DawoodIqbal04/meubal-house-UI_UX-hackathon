@@ -15,9 +15,7 @@ const page = () => {
       </div>
       <div className="min-h-[500px] flex justify-center items-start pt-16 p-6">
         <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Cart Items Section */}
           <div className="lg:col-span-2 xs:flex md:flex-col xs:flex-row md:items-start xs:items-center bg-white rounded-lg ">
-            {/* Header */}
             <div className="flex md:flex-row xs:flex-col md:items-center xs:items-start justify-between md:w-full md:pr-0 xs:pr-5 md:h-[55px] xs:h-48 bg-yellow-50 text-gray-600 font-bold md:text-base xs:text-[15px] uppercase">
               <div className="w-1/2 md:h-6 xs:h-16 md:ml-5">Product</div>
               <div className="w-1/4 text-center">Price</div>
@@ -25,9 +23,7 @@ const page = () => {
               <div className="w-1/4 text-center">Subtotal</div>
             </div>
 
-            {/* Cart Item */}
             <div className="flex md:flex-row xs:flex-col lg:gap-[85px] md:gap-[70px] md:items-center xs:gap-4 md:mt-10 py-4 px-2 text-base">
-              {/* Product Image and Name */}
               <div className="flex md:items-center xs:items-start md:w-1/2">
                 <div className="w-20 h-16 relative bg-yellow-100 rounded-md overflow-hidden">
                   <Image
@@ -42,12 +38,10 @@ const page = () => {
                 </span>
               </div>
 
-              {/* Price */}
               <div className="md:w-1/4 xs:w-[70%] text-center text-gray-800">
                 Rs. 250,000.00
               </div>
 
-              {/* Quantity */}
               <div className="w-1/6 text-center">
                 <input
                   type="number"
@@ -56,14 +50,12 @@ const page = () => {
                 />
               </div>
 
-              {/* Subtotal */}
               <div className="md:w-1/4 xs:w-[70%] text-center text-gray-800">
                 Rs. 250,000.00
               </div>
             </div>
           </div>
 
-          {/* Cart Totals Section */}
           <div className="bg-yellow-50 flex flex-col items-center justify-center gap-8 rounded-lg p-6">
             <p className="text-3xl font-bold text-gray-800 mb-6">Cart Totals</p>
             <div className="flex items-center gap-8 justify-between mb-3">

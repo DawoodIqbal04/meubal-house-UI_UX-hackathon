@@ -64,16 +64,16 @@ const Footer = () => {
           </div>
         </div>
         <div className="lg:hidden xs:flex md:flex-row xs:flex-col items-start xs:-ml-24 md:-ml-0 xs:-mt-10 md:-mt-20 md:gap-8 xs:gap-2 md:text-sm xs:text-sm font-normal text-[#9F9F9F]">
-            <p>
-              400 University Drive Suite 200 Coral
-              <br />
-              Gables,
-              <br />
-              FL 33134 USA
-            </p>
-            <p>www.meubelhouse.com</p>
-            <p>bussiness.meubelhouse@gmail.com</p>
-          </div>
+          <p>
+            400 University Drive Suite 200 Coral
+            <br />
+            Gables,
+            <br />
+            FL 33134 USA
+          </p>
+          <p>www.meubelhouse.com</p>
+          <p>bussiness.meubelhouse@gmail.com</p>
+        </div>
         <div className=" flex xs:flex-col md:items-start xs:items-start md:h-[69px] xs:h-[50px] w-full border-t-[1px] xs:justify-center font-normal md:text-base xs:text-xs border-[#9f9f9f]">
           <p>Developed With ❤ By MUHAMMAD DAWOOD IQBAL</p>
           <p>Meubal House © All Rights Reserved.</p>

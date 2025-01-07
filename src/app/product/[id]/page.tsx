@@ -198,10 +198,14 @@ const SingleProductPage = ({ params }: { params: Params }) => {
 
         <div className="lg:w-2/5 md:w-[35%] md:mt-0 xs:mt-10 flex flex-col items-start gap-[10px]">
           <div>
-            <p className="lg:text-[42px] md:text-[35px] xs:text-[25px] font-medium">{product.title}</p>
+            <p className="lg:text-[42px] md:text-[35px] xs:text-[25px] font-medium">
+              {product.title}
+            </p>
           </div>
           <div>
-            <p className="lg:text-xl md:text-lg font-bold text-gray-600">{product.price}</p>
+            <p className="lg:text-xl md:text-lg font-bold text-gray-600">
+              {product.price}
+            </p>
           </div>
 
           <div className="flex items-center space-x-2">
@@ -300,7 +304,9 @@ const SingleProductPage = ({ params }: { params: Params }) => {
       </div>
       <div className="flex flex-col items-center lg:gap-10  mt-10 w-full lg:h-[750px] md:min-h-[100vh] bg-white">
         <div className="flex flex-col items-center font-medium">
-          <p className=" lg:text-4xl md:text-3xl xs:text-2xl">Related Products</p>
+          <p className=" lg:text-4xl md:text-3xl xs:text-2xl">
+            Related Products
+          </p>
         </div>
 
         <div className="lg:flex xs:grid md:grid-cols-2 xs:grid-cols-1  md:gap-x-28 items-center justify-around lg:gap-5">

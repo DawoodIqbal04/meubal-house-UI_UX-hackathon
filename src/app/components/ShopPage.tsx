@@ -21,12 +21,12 @@ const ShopPage = () => {
               </div>
             </div>
             <div className=" md:flex md:gap-5">
-            <div className="hidden md:flex">
-              <BsFillGridFill size={22} />
-            </div>
-            <div className="hidden md:flex">
-              <BsViewList size={22} />
-            </div>
+              <div className="hidden md:flex">
+                <BsFillGridFill size={22} />
+              </div>
+              <div className="hidden md:flex">
+                <BsViewList size={22} />
+              </div>
             </div>
           </div>
           <div className="border-gray-500 border-l-2 font-normal md:text-base xs:text-sm">

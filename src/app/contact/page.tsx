@@ -10,19 +10,22 @@ const page = () => {
   return (
     <div className="overflow-x-hidden">
       <div>
-      <Header bgcolor={"white"} />
+        <Header bgcolor={"white"} />
       </div>
       <div>
-        <PageToper name="Contact"/>
+        <PageToper name="Contact" />
       </div>
-      
+
       <div className="w-full min-h-[150vh] flex flex-col items-center justify-around lg:py-20 md:py-16 xs:py-10">
         <div className="w-[650px] text-center flex flex-col gap-3">
-          <p className="md:text-4xl xs:text-2xl font-semibold">Get In Touch With Us</p>
+          <p className="md:text-4xl xs:text-2xl font-semibold">
+            Get In Touch With Us
+          </p>
           <p className="md:text-base xs:text-xs font-normal text-[#9f9f9f]">
-            For More Information About Our Product & Services.<br /> Please Feel Free
-            To Drop Us An Email.<br /> Our Staff Always Be There To Help You Out.<br /> Do
-            Not Hesitate!
+            For More Information About Our Product & Services.
+            <br /> Please Feel Free To Drop Us An Email.
+            <br /> Our Staff Always Be There To Help You Out.
+            <br /> Do Not Hesitate!
           </p>
         </div>
         <div className="w-full flex lg:flex-row xs:flex-col lg:items-start xs:items-center mt-20 justify-evenly">

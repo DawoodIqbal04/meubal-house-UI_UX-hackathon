@@ -22,7 +22,9 @@ const CartModel = () => {
           </div>
           <div>
             <div>
-              <span className="xs:font-normal md:text-base xs:text-sm">Asgaard Sofa</span>
+              <span className="xs:font-normal md:text-base xs:text-sm">
+                Asgaard Sofa
+              </span>
             </div>
             <div>
               <span className="md:text-base xs:text-sm font-normal">1</span> x{" "}

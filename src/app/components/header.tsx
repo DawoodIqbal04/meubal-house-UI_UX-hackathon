@@ -46,22 +46,22 @@ const Header = (props: { bgcolor: string }) => {
         </ul>
       </div>
       <div className="flex items-center md:hidden lg:hidden gap-4">
-      <div
-        onClick={() => setIsMenuOpen((prev) => !prev)}
-        className="lg:hidden md:hidden xs:flex relative"
-      >
-        <CgMenuRight size={25} />
-        {isMenuOpen && <MenuModel />}
-      </div>
-      <div className="relative lg:hidden md:hidden xs:flex">
-        <div onClick={() => setIsCartOpen((prev) => !prev)}>
-          <div className="flex items-center justify-center absolute w-[18px] h-[18px] top-[-20%] right-[-20%] rounded-full text-white text-[13px] bg-red-500 cursor-pointer">
-            <span>1</span>
-          </div>
-          <AiOutlineShoppingCart size={25} cursor={"pointer"} />
-          {isCartOpen && <CartModel />}
+        <div
+          onClick={() => setIsMenuOpen((prev) => !prev)}
+          className="lg:hidden md:hidden xs:flex relative"
+        >
+          <CgMenuRight size={25} />
+          {isMenuOpen && <MenuModel />}
         </div>
-      </div>
+        <div className="relative lg:hidden md:hidden xs:flex">
+          <div onClick={() => setIsCartOpen((prev) => !prev)}>
+            <div className="flex items-center justify-center absolute w-[18px] h-[18px] top-[-20%] right-[-20%] rounded-full text-white text-[13px] bg-red-500 cursor-pointer">
+              <span>1</span>
+            </div>
+            <AiOutlineShoppingCart size={25} cursor={"pointer"} />
+            {isCartOpen && <CartModel />}
+          </div>
+        </div>
       </div>
 
       <div className=" lg:flex md:flex xs:hidden items-center justify-between lg:gap-8 md:gap-4 relative">

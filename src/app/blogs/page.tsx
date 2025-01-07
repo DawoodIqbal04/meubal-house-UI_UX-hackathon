@@ -20,7 +20,6 @@ const page = () => {
       </div>
       <div className="w-full flex lg:flex-row xs:flex-col-reverse items-start justify-between gap-16 py-10 lg:pt-20 lg:px-20 md:px-10 xs:px-4">
         <div className="flex flex-col items-start justify-between lg:gap-10 md:gap-20 xs:gap-10">
-          {/* Post 1 */}
           <div className="bg-white flex flex-col items-start justify-between lg:w-[750px] xs:w-full lg:h-[650px] xs:h-[88vh] rounded-lg overflow-hidden">
             <div className="relative w-full h-[400px]">
               <Image
@@ -62,7 +61,6 @@ const page = () => {
             </div>
           </div>
 
-          {/* Post 2 */}
           <div className="bg-white flex flex-col items-start justify-between lg:w-[750px] xs:w-100% lg:h-[650px] xs:h-[88vh] rounded-lg overflow-hidden">
             <div className="relative w-full h-[400px]">
               <Image
@@ -104,7 +102,6 @@ const page = () => {
             </div>
           </div>
 
-          {/* Post 3 */}
           <div className="bg-white flex flex-col items-start justify-between lg:w-[750px] xs:100% lg:h-[650px] xs:h-[88vh] rounded-lg overflow-hidden">
             <div className="relative w-full h-[400px]">
               <Image
@@ -148,7 +145,6 @@ const page = () => {
         </div>
 
         <div className="flex lg:flex-col md:flex-row xs:flex-col lg:mt-10 lg:gap-20 md:gap-0 xs:gap-16 lg:pl-0 md:pl-10 xs:pl-7 ">
-          {/* Categories */}
           <div className="w-[390px]">
             <div className="flex items-center gap-2 bg-white border border-gray-400 w-max p-2 rounded-md mb-8">
               <input
@@ -160,7 +156,9 @@ const page = () => {
               </button>
             </div>
             <div>
-              <p className="text-2xl font-medium md:mb-10 xs:mb-6">Categories</p>
+              <p className="text-2xl font-medium md:mb-10 xs:mb-6">
+                Categories
+              </p>
             </div>
             <div className="space-y-2 font-normal text-base text-gray-400 flex flex-col items-start md:gap-10 xs:gap-5">
               <div className="flex items-center justify-between w-3/5">
@@ -186,10 +184,11 @@ const page = () => {
             </div>
           </div>
 
-          {/* Recent Posts */}
           <div className="flex flex-col items-start ">
             <div>
-              <p className="text-2xl font-medium md:mb-10 xs:mb-6">Recent Posts</p>
+              <p className="text-2xl font-medium md:mb-10 xs:mb-6">
+                Recent Posts
+              </p>
             </div>
             <div className="w-[250px] flex flex-col items-start justify-center gap-5">
               <div className="flex flex-col md:gap-5 xs:gap-2">
@@ -303,7 +302,7 @@ const page = () => {
           </div>
         </div>
       </div>
-      {/* Pagination */}
+
       <div className="flex items-center justify-center gap-5 my-10">
         <div className="flex items-center justify-center md:w-[60px] xs:w-[40px] md:h-[60px] xs:h-[40px] rounded-[10px] cursor-pointer bg-[#FBEBB5]">
           <span>1</span>
