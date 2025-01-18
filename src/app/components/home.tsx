@@ -61,7 +61,7 @@ const HomePage = () => {
           </p>
         </div>
 
-        <div className="lg:flex lg:flex-nowrap xs:grid xs:grid-cols-1 md:grid-cols-2 md:space-x-14 items-center justify-around gap-5">
+        <div className="lg:flex lg:flex-nowrap xs:grid xs:grid-cols-1 md:grid-cols-2 md:space-x-14 items-center justify-around">
           <ProductCard
             imageUrl="/pick1.png"
             price="RS. 25,000"

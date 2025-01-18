@@ -12,7 +12,7 @@ const Hero = () => {
           alt="Rocket Single Seater"
         ></Image>
       </div>
-      <div className=" flex flex-col md:items-start xs:items-center lg:gap-10 md:gap-5 xs:gap-3 lg:text-left md:text-left xs:text-center">
+      <div className="  flex flex-col md:items-start xs:items-center lg:gap-10 md:gap-5 xs:gap-3 lg:text-left md:text-left xs:text-center">
         <p className=" lg:text-6xl md:text-5xl xs:text-4xl">
           Rocket Single <br className="md:flex xs:hidden" />
           Seater

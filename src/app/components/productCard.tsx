@@ -15,7 +15,7 @@ const ProductCard = (props: {
       href={""}
       className="flex flex-col items-center justify-between w-[250px] h-[350px] mt-10"
     >
-      <div className="flex items-center w-full h-[250px] bg-cover">
+      <div className="flex items-center w-full h-[250px] bg-cover bg-yellow-100 product">
         <Image
           src={props.imageUrl}
           alt={props.title}

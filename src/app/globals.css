@@ -35,6 +35,10 @@ body {
   width: 100%;
 }
 
+.product{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
 
 @layer utilities {
   .text-balance {

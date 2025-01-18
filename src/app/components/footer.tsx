@@ -21,16 +21,16 @@ const Footer = () => {
             <div className="flex flex-col lg:gap-12 md:gap-8 xs:gap-4">
               <div className=" text-[#9f9f9f]">Links</div>
               <div>
-                <Link href={""}>Home</Link>
+                <Link href={"/"}>Home</Link>
               </div>
               <div>
-                <Link href={""}>Shop</Link>
+                <Link href={"/shop"}>Shop</Link>
               </div>
               <div>
-                <Link href={""}>Contact</Link>
+                <Link href={"/contact"}>Contact</Link>
               </div>
               <div>
-                <Link href={""}>About</Link>
+                <Link href={"/about"}>About</Link>
               </div>
             </div>
             <div className="flex flex-col lg:gap-12 md:gap-8 xs:gap-4">
