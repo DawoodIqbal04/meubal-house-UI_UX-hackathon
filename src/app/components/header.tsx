@@ -10,9 +10,12 @@ import { IoHeartOutline } from "react-icons/io5";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { CgMenuRight } from "react-icons/cg";
 import MenuModel from "./MenuModel";
+import CategoryModel from "./CategoryModel";
 
 const Header = (props: { bgcolor: string }) => {
   const [isCartOpen, setIsCartOpen] = useState(false);
+
+  const [isCategoryOpen, setIsCategoryOpen] = useState(false);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -34,8 +37,12 @@ const Header = (props: { bgcolor: string }) => {
           <li className="relative">
             <Link href={"/"}>Home</Link>
           </li>
-          <li className="relative">
+          <li className="relative"
+          onMouseEnter={() => setIsCategoryOpen(true)}
+          onMouseLeave={() => setIsCategoryOpen(false)}
+          >
             <Link href={"/shop"}>Shop</Link>
+            {isCategoryOpen && <CategoryModel />}
           </li>
           <li className="relative">
             <Link href={"/about"}>About</Link>

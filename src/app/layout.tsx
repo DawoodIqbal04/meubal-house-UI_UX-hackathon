@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Poppins } from "next/font/google";
 import Footer from "./components/footer";
+import { Suspense } from "react";
 
 const poppins = Poppins({
   weight: ["200", "400", "500", "700", "900"],
@@ -24,6 +25,7 @@ export default function RootLayout({
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
       </head>
       <body className={`${poppins.className} `}>
+        <Suspense fallback={<div>Loading...</div>}> </Suspense>
         {children}
         <Footer />
       </body>
