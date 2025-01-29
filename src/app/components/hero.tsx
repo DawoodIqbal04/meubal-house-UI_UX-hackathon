@@ -15,9 +15,10 @@ const Hero = () => {
       </div>
       <div className="  flex flex-col md:items-start xs:items-center lg:gap-10 md:gap-5 xs:gap-3 lg:text-left md:text-left xs:text-center">
         <p className=" lg:text-6xl md:text-5xl xs:text-4xl  w-96">
-        Sidus Sofa (Beige)
+          Sidus Sofa (Beige)
         </p>
-        <Link href={'/product/sidus-sofa-beige'}
+        <Link
+          href={"/product/sidus-sofa-beige"}
           className="lg:text-2xl md:text-xl xs:text-xl lg:w-[121px] xs:w-max lg:h-[50px] md:h-[40px] border-black border-b-2"
         >
           Shop Now

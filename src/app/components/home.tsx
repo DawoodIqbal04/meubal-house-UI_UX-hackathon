@@ -15,14 +15,13 @@ async function getData() {
     'slug': slug.current,
     'category':category->name, 
     'imageUrl': image[0].asset->url
-}`
+}`;
   const data = await client.fetch(query);
   return data;
 }
 
-const HomePage = async() => {
-
-  const products:Product[] = await getData();
+const HomePage = async () => {
+  const products: Product[] = await getData();
 
   return (
     <div className="overflow-x-hidden">
@@ -79,31 +78,33 @@ const HomePage = async() => {
         </div>
 
         <div className="lg:flex lg:flex-nowrap xs:grid xs:grid-cols-1 md:grid-cols-2 md:space-x-14 items-center justify-around">
-        {products.map((product)  =>  (
-          <Link
-            href={`/product/${product.slug}`}
-            key={product._id}
-            className="flex flex-col items-center justify-between lg:w-[270px] md:w-[300px] xs:w-[380px] h-[350px] mt-10"
-          >
-            <div className="flex items-center w-full h-[250px] product hover:opacity-75">
-              <Image
-              className="w-full h-[250px] rounded-lg object-cover object-center"
-                src={product.imageUrl}
-                alt={product.name}
-                priority
-                height={0}
-                width={300}
-              ></Image>
-            </div>
-            <div className="flex flex-col items-start justify-between gap-5 w-full h-100px">
-              <p className="font-normal text-base">{product.name}</p>
-            <div className="flex items-center gap-16">
-              <p className="font-medium text-xl">RS.{product.price}</p>
-              <p className="font-medium text-base text-yellow-500">{product.category}</p>
-            </div>  
-            </div>
-          </Link>
-        ))}
+          {products.map((product) => (
+            <Link
+              href={`/product/${product.slug}`}
+              key={product._id}
+              className="flex flex-col items-center justify-between lg:w-[270px] md:w-[300px] xs:w-[380px] h-[350px] mt-10"
+            >
+              <div className="flex items-center w-full h-[250px] product hover:opacity-75">
+                <Image
+                  className="w-full h-[250px] rounded-lg object-cover object-center"
+                  src={product.imageUrl}
+                  alt={product.name}
+                  priority
+                  height={0}
+                  width={300}
+                ></Image>
+              </div>
+              <div className="flex flex-col items-start justify-between gap-5 w-full h-100px">
+                <p className="font-normal text-base">{product.name}</p>
+                <div className="flex items-center gap-16">
+                  <p className="font-medium text-xl">RS.{product.price}</p>
+                  <p className="font-medium text-base text-yellow-500">
+                    {product.category}
+                  </p>
+                </div>
+              </div>
+            </Link>
+          ))}
         </div>
 
         <div>

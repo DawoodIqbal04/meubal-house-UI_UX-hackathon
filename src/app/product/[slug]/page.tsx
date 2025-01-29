@@ -12,7 +12,7 @@ import { Products } from "@/app/components/interface";
 import ImageGallery from "@/app/components/ImageGallery";
 
 async function getData(slug: string) {
-const query = `*[_type == "product" && slug.current == '${slug}'][0]{
+  const query = `*[_type == "product" && slug.current == '${slug}'][0]{
   _id,
     price,
     name,
@@ -20,15 +20,14 @@ const query = `*[_type == "product" && slug.current == '${slug}'][0]{
     description,
     "slug": slug.current,
     "category": category->name
-}`
+}`;
 
-const product = await client.fetch(query);
+  const product = await client.fetch(query);
 
-return product;
+  return product;
 }
 
-const SingleProductPage = async({params}: {params :{slug: string}}) => {
-
+const SingleProductPage = async ({ params }: { params: { slug: string } }) => {
   const product: Products = await getData(params.slug);
 
   if (!product) {
@@ -110,22 +109,26 @@ const SingleProductPage = async({params}: {params :{slug: string}}) => {
             <p className="flex items-center gap-3">
               <span>Share</span>:
               <div className="flex items-center gap-2 text-black">
-                <Link className="hover:opacity-75"
+                <Link
+                  className="hover:opacity-75"
                   href={
                     "https://www.linkedin.com/in/muhammad-dawood-bb469b29a/?originalSubdomain=pk"
                   }
                 >
                   <FaLinkedin />
                 </Link>
-                <Link className="hover:opacity-75"
+                <Link
+                  className="hover:opacity-75"
                   href={
                     "https://www.facebook.com/people/Dawood-Al-Zadjali/pfbid02GVr5KZf5u8DTYWojbF627XZ6hUFD1chaTajYozNPZHeQLaQH4ebikxw2edYigFMGl/"
                   }
                 >
                   <FaFacebook />
                 </Link>
-                <Link className="hover:opacity-75"
-                  href={"https://github.com/DawoodIqbal04"}>
+                <Link
+                  className="hover:opacity-75"
+                  href={"https://github.com/DawoodIqbal04"}
+                >
                   <FaGithub />
                 </Link>
               </div>

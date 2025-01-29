@@ -37,9 +37,10 @@ const Header = (props: { bgcolor: string }) => {
           <li className="relative">
             <Link href={"/"}>Home</Link>
           </li>
-          <li className="relative"
-          onMouseEnter={() => setIsCategoryOpen(true)}
-          onMouseLeave={() => setIsCategoryOpen(false)}
+          <li
+            className="relative"
+            onMouseEnter={() => setIsCategoryOpen(true)}
+            onMouseLeave={() => setIsCategoryOpen(false)}
           >
             <Link href={"/shop"}>Shop</Link>
             {isCategoryOpen && <CategoryModel />}

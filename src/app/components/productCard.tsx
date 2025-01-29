@@ -7,9 +7,7 @@ const ProductCard = (props: {
   imageUrl: string | StaticImport;
   title: string;
   price: string | number;
-}
-
-) => {
+}) => {
   return (
     <Link
       href={""}

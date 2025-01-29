@@ -69,7 +69,10 @@ const page = () => {
                 Rs. 250,000.00
               </span>
             </div>
-            <Link href={"/checkout"} className="flex items-center justify-center w-3/5 h-12 bg-transparent text-black border transition border-black rounded-md hover:bg-yellow-400 hover:border-none">
+            <Link
+              href={"/checkout"}
+              className="flex items-center justify-center w-3/5 h-12 bg-transparent text-black border transition border-black rounded-md hover:bg-yellow-400 hover:border-none"
+            >
               Check Out
             </Link>
           </div>

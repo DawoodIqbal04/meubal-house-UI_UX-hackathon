@@ -4,7 +4,7 @@ import Image from "next/image";
 import { client } from "@/sanity/lib/client";
 import { Product } from "./interface";
 
-export async function getData(){
+export async function getData() {
   const query = `*[_type == "product"][0...20] {
   _id,
     price,
@@ -14,13 +14,12 @@ export async function getData(){
     "category": category->name
 }`;
 
-const data = await client.fetch(query);
-return data;
+  const data = await client.fetch(query);
+  return data;
 }
 
-const ShopProducts = async() => { 
-
-  const products:Product[] = await getData();
+const ShopProducts = async () => {
+  const products: Product[] = await getData();
 
   return (
     <div className="bg-white overflow-x-hidden">
@@ -33,7 +32,7 @@ const ShopProducts = async() => {
           >
             <div className="flex items-center w-full h-[250px] product hover:opacity-75">
               <Image
-              className="w-full h-[250px] rounded-lg object-cover object-center"
+                className="w-full h-[250px] rounded-lg object-cover object-center"
                 src={product.imageUrl}
                 alt={product.name}
                 priority
@@ -43,10 +42,12 @@ const ShopProducts = async() => {
             </div>
             <div className="flex flex-col items-start justify-between gap-5 w-full h-100px">
               <p className="font-normal text-base">{product.name}</p>
-            <div className="flex items-center gap-16">
-              <p className="font-medium text-xl">RS.{product.price}</p>
-              <p className="font-medium text-base text-yellow-500">{product.category}</p>
-            </div>  
+              <div className="flex items-center gap-16">
+                <p className="font-medium text-xl">RS.{product.price}</p>
+                <p className="font-medium text-base text-yellow-500">
+                  {product.category}
+                </p>
+              </div>
             </div>
           </Link>
         ))}

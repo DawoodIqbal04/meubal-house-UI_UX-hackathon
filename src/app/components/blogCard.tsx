@@ -20,7 +20,9 @@ const BlogCard = (props: {
         ></Image>
       </div>
       <div className="flex flex-col items-center justify-center lg:gap-2 md:gap-3 xs:gap-1 lg:mt-10 md:mt-5 xs:mt-4">
-        <p className="lg:font-normal xs:font-medium lg:text-xl xs:text-base xs:text-center">{props.title}</p>
+        <p className="lg:font-normal xs:font-medium lg:text-xl xs:text-base xs:text-center">
+          {props.title}
+        </p>
         <button className=" lg:w-[130px] md:w-max lg:h-[40px] md:h-[30px] border-black border-b-2 font-medium lg:text-2xl md:text-xl">
           Read More
         </button>

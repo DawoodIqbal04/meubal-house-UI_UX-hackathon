@@ -1,13 +1,13 @@
-import { client } from '@/sanity/lib/client';
-import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react'
-import { Product } from '../components/interface';
-import Header from '../components/header';
-import PageToper from '../components/PageToper';
+import { client } from "@/sanity/lib/client";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import { Product } from "../components/interface";
+import Header from "../components/header";
+import PageToper from "../components/PageToper";
 
 async function getData(category: string) {
-    const query = ` *[_type == "product" && category->name == '${category}']{
+  const query = ` *[_type == "product" && category->name == '${category}']{
   _id,
     price,
     name,
@@ -15,26 +15,31 @@ async function getData(category: string) {
     "slug": slug.current,
     'category': category->name
 }`;
-    const data = await client.fetch(query);
-    return data;
+  const data = await client.fetch(query);
+  return data;
 }
 
-const CategoryPage = async({ params }: { params: { category: string } }) => {
-    const data: Product[] = await getData(params.category);
+const CategoryPage = async ({ params }: { params: { category: string } }) => {
+  const data: Product[] = await getData(params.category);
   return (
     <div>
-        <div>
-          <Header bgcolor="white" />
-        </div>
-        <div>
-        <PageToper name={
-          params.category === 'Livingroom' ? 'Living Room' :
-          params.category === 'Bedroom' ? 'Bed Room' :
-          params.category === 'Diningroom' ? 'Dining Room' :
-          'Outdoor'
-        } />
-        </div>
-        <div className=" w-full flex items-start justify-center mt-10 lg:gap-6 md:gap-x-16 px-12 flex-wrap">
+      <div>
+        <Header bgcolor="white" />
+      </div>
+      <div>
+        <PageToper
+          name={
+            params.category === "Livingroom"
+              ? "Living Room"
+              : params.category === "Bedroom"
+                ? "Bed Room"
+                : params.category === "Diningroom"
+                  ? "Dining Room"
+                  : "Outdoor"
+          }
+        />
+      </div>
+      <div className=" w-full flex items-start justify-center mt-10 lg:gap-6 md:gap-x-16 px-12 flex-wrap">
         {data.map((product) => (
           <Link
             href={`/product/${product.slug}`}
@@ -43,7 +48,7 @@ const CategoryPage = async({ params }: { params: { category: string } }) => {
           >
             <div className="flex items-center w-full h-[250px] product hover:opacity-75">
               <Image
-              className="w-full h-[250px] object-cover object-center"
+                className="w-full h-[250px] object-cover object-center"
                 src={product.imageUrl}
                 alt={product.name}
                 priority
@@ -59,7 +64,7 @@ const CategoryPage = async({ params }: { params: { category: string } }) => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CategoryPage
+export default CategoryPage;

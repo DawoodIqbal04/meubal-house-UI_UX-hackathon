@@ -1,11 +1,10 @@
-'use client';
+"use client";
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 export default function Loading() {
-  
-  const [ ,setIsLoading] = useState(true);
+  const [, setIsLoading] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -43,4 +42,3 @@ export default function Loading() {
     </div>
   );
 }
-
