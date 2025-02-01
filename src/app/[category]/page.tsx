@@ -48,7 +48,7 @@ const CategoryPage = async ({ params }: { params: { category: string } }) => {
           >
             <div className="flex items-center w-full h-[250px] product hover:opacity-75">
               <Image
-                className="w-full h-[250px] object-cover object-center"
+                className="w-full h-[250px] rounded-lg object-cover object-center"
                 src={product.imageUrl}
                 alt={product.name}
                 priority
