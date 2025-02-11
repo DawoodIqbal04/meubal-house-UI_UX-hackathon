@@ -6,7 +6,7 @@ import ShopInfo from "../components/ShopInfo";
 const page = () => {
   return (
     <div className="overflow-x-hidden">
-      <Header bgcolor={"white"} />
+      <Header bgcolor={"white"} placeHolder="Search Products" />
       <ShopPage />
       <ShopInfo />
     </div>

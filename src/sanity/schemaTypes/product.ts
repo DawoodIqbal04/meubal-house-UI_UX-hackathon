@@ -37,6 +37,12 @@ export default defineType({
             validation: (Rule) => Rule.required()
         },
         {
+            name: 'price_id',
+            title: 'Stripe Price ID',
+            type: 'string',
+            validation: (Rule) => Rule.required()
+        },
+        {
             name: 'category',
             title: 'Product Category',
             type: 'reference',

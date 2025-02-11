@@ -24,7 +24,7 @@ const CategoryPage = async ({ params }: { params: { category: string } }) => {
   return (
     <div>
       <div>
-        <Header bgcolor="white" />
+        <Header bgcolor="white" placeHolder="Search Products"/>
       </div>
       <div>
         <PageToper
@@ -32,14 +32,16 @@ const CategoryPage = async ({ params }: { params: { category: string } }) => {
             params.category === "Livingroom"
               ? "Living Room"
               : params.category === "Bedroom"
-                ? "Bed Room"
-                : params.category === "Diningroom"
-                  ? "Dining Room"
-                  : "Outdoor"
+              ? "Bed Room"
+              : params.category === "Diningroom"
+              ? "Dining Room"
+              : params.category === "Outdoor"
+              ? "Outdoor"
+              : ''
           }
         />
       </div>
-      <div className=" w-full flex items-start justify-center mt-10 lg:gap-6 md:gap-x-16 px-12 flex-wrap">
+      <div className=" w-full flex items-start justify-center mt-10 lg:gap-6 md:gap-x-16 md:px-10 xs:px-5 flex-wrap">
         {data.map((product) => (
           <Link
             href={`/product/${product.slug}`}

@@ -3,35 +3,48 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import CartModel from "./CartModel";
 import { IoPersonOutline } from "react-icons/io5";
-import { IoSearchOutline } from "react-icons/io5";
 import { IoHeartOutline } from "react-icons/io5";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import { CgMenuRight } from "react-icons/cg";
 import MenuModel from "./MenuModel";
 import CategoryModel from "./CategoryModel";
+import { useShoppingCart } from "use-shopping-cart";
+import SearchModel from "./SearchModel";
 
-const Header = (props: { bgcolor: string }) => {
-  const [isCartOpen, setIsCartOpen] = useState(false);
+const Header = (props: { bgcolor: string, placeHolder: string }) => {
+  const { handleCartClick, cartCount } = useShoppingCart();
 
   const [isCategoryOpen, setIsCategoryOpen] = useState(false);
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
 
   return (
     <div
-      className={`lg:h-[100px] md:h-[80px] xs:h-[60px] w-full bg-[${props.bgcolor}] flex items-center lg:justify-around md:justify-around xs:justify-between lg:px-0 md:px-0 xs:px-4`}
+      className={`lg:h-[100px] md:h-[80px] xs:h-[60px] w-full bg-[${props.bgcolor}] flex items-center lg:justify-around md:justify-around xs:justify-between lg:px-0 md:px-0 xs:px-6`}
     >
-      <div className="flex items-center">
-        <div className="lg:h-[75px] lg:w-[75px] md:h-[70px] md:w-[70px] xs:h-[65px] xs:w-[65px]">
-          <Image src={"/Logo.png"} height={75} width={75} alt="Logo"></Image>
+      <div className="flex items-center md:justify-normal md:w-auto xs:justify-between xs:w-full">
+        <div className="flex items-center md:hidden lg:hidden gap-4">
+          <div>
+            <MenuModel />
+          </div>
         </div>
-        <div className=" font-bold uppercase lg:text-xl md:text-lg xs:text-base xs:-mr-1 cursor-default">
-          <p>Meubel House</p>
+        <div className="flex items-center">
+          <div className="lg:h-[75px] lg:w-[75px] md:h-[70px] md:w-[70px] xs:h-[65px] xs:w-[65px]">
+            <Image src={"/Logo.png"} height={75} width={75} alt="Logo"></Image>
+          </div>
+          <div className=" font-bold uppercase lg:text-xl md:text-lg xs:text-base xs:-mr-1 cursor-default">
+            <p>Meubel House</p>
+          </div>
+        </div>
+        <div className="relative cursor-pointer lg:hidden md:hidden xs:flex">
+          <button onClick={() => handleCartClick()}>
+            <div className="flex items-center justify-center absolute w-[18px] h-[18px] top-[-20%] right-[-20%] rounded-full text-white text-[13px] bg-red-500">
+              <span>{cartCount}</span>
+            </div>
+            <AiOutlineShoppingCart size={25} cursor={"pointer"} />
+          </button>
         </div>
       </div>
-
       <div className="lg:flex md:flex xs:hidden">
         <ul className="flex items-center lg:gap-12 md:gap-6 font-medium lg:text-base md:text-sm navlinks">
           <li className="relative">
@@ -53,48 +66,27 @@ const Header = (props: { bgcolor: string }) => {
           </li>
         </ul>
       </div>
-      <div className="flex items-center md:hidden lg:hidden gap-4">
-        <div
-          onClick={() => setIsMenuOpen((prev) => !prev)}
-          className="lg:hidden md:hidden xs:flex relative"
-        >
-          <CgMenuRight size={25} />
-          {isMenuOpen && <MenuModel />}
-        </div>
-        <div className="relative lg:hidden md:hidden xs:flex">
-          <div onClick={() => setIsCartOpen((prev) => !prev)}>
-            <div className="flex items-center justify-center absolute w-[18px] h-[18px] top-[-20%] right-[-20%] rounded-full text-white text-[13px] bg-red-500 cursor-pointer">
-              <span>1</span>
-            </div>
-            <AiOutlineShoppingCart size={25} cursor={"pointer"} />
-            {isCartOpen && <CartModel />}
-          </div>
-        </div>
-      </div>
 
-      <div className=" lg:flex md:flex xs:hidden items-center justify-between lg:gap-8 md:gap-4 relative">
+      <div className="md:flex xs:hidden items-center justify-between lg:gap-8 md:gap-4 relative">
         <div>
           <Link href={"/account"}>
             <IoPersonOutline size={25} />
           </Link>
         </div>
         <div>
-          <Link href={""}>
-            <IoSearchOutline size={25} />
-          </Link>
+          <SearchModel placeholder={props.placeHolder}/>
         </div>
         <div>
           <Link href={""}>
             <IoHeartOutline size={25} />
           </Link>
         </div>
-        <div className="relative">
-          <div onClick={() => setIsCartOpen((prev) => !prev)}>
+        <div className="relative" onClick={() => handleCartClick()}>
+          <div>
             <div className="flex items-center justify-center absolute w-[18px] h-[18px] top-[-20%] right-[-20%] rounded-full text-white text-[13px] bg-red-500 cursor-pointer">
-              <span>1</span>
+              <span>{cartCount}</span>
             </div>
             <AiOutlineShoppingCart size={25} cursor={"pointer"} />
-            {isCartOpen && <CartModel />}
           </div>
         </div>
       </div>

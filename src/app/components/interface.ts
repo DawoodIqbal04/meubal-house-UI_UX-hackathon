@@ -14,4 +14,6 @@ export interface Products {
   description: string;
   slug: string;
   category: string;
+  stock: number;
+  price_id: string;
 }

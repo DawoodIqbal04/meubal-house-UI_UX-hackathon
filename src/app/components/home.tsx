@@ -26,7 +26,7 @@ const HomePage = async () => {
   return (
     <div className="overflow-x-hidden">
       <div>
-        <Header bgcolor={"#FBEBB5"} />
+        <Header bgcolor={"#FBEBB5"} placeHolder=""/>
       </div>
       <div>
         <Hero />
@@ -77,16 +77,16 @@ const HomePage = async () => {
           </p>
         </div>
 
-        <div className="lg:flex lg:flex-nowrap xs:grid xs:grid-cols-1 md:grid-cols-2 md:space-x-14 items-center justify-around">
+        <div className="lg:flex lg:flex-nowrap xs:grid xs:grid-cols-1 md:grid-cols-2 md:space-x-9 items-center justify-around">
           {products.map((product) => (
             <Link
               href={`/product/${product.slug}`}
               key={product._id}
-              className="flex flex-col items-center justify-between lg:w-[270px] md:w-[300px] xs:w-[380px] h-[350px] mt-10"
+              className="flex flex-col items-center justify-between lg:w-[270px] md:w-[300px] xs:w-[350px] h-[350px] mt-10"
             >
-              <div className="flex items-center w-full h-[250px] product hover:opacity-75">
+              <div className="flex items-center w-full md:h-[250px] xs:h-[320px] product hover:opacity-75">
                 <Image
-                  className="w-full h-[250px] rounded-lg object-cover object-center"
+                  className="w-full h-full rounded-lg object-cover object-center"
                   src={product.imageUrl}
                   alt={product.name}
                   priority
@@ -94,9 +94,9 @@ const HomePage = async () => {
                   width={300}
                 ></Image>
               </div>
-              <div className="flex flex-col items-start justify-between gap-5 w-full h-100px">
+              <div className="flex flex-col items-start justify-between gap-5 w-full mt-2">
                 <p className="font-normal text-base">{product.name}</p>
-                <div className="flex items-center gap-16">
+                <div className="flex items-center justify-between w-full">
                   <p className="font-medium text-xl">RS.{product.price}</p>
                   <p className="font-medium text-base text-yellow-500">
                     {product.category}
@@ -148,7 +148,7 @@ const HomePage = async () => {
           </p>
         </div>
 
-        <div className="lg:flex xs:grid md:grid-cols-2 xs:grid-cols-1 md:space-y-0 xs:space-y-20 md:gap-12 xs:gap-10 lg:items-center lg:justify-around lg:gap-5 lg:mt-0 xs:mt-10">
+        <div className="lg:flex xs:grid md:grid-cols-2 xs:grid-cols-1 md:space-y-0 md:space-x-6 xs:space-y-20 md:gap-12 xs:gap-10 lg:items-center lg:justify-around lg:gap-5 lg:mt-0 xs:mt-10">
           <BlogCard
             imageUrl={"/blog1.png"}
             title={"Going all-in with millennial design"}

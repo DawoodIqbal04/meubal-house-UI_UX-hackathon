@@ -1,64 +1,135 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import { MdCancel } from "react-icons/md";
-import Link from "next/link";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+} from "@/components/ui/sheet";
+import { useShoppingCart } from "use-shopping-cart";
 
 const CartModel = () => {
+  const {
+    cartCount,
+    shouldDisplayCart,
+    handleCartClick,
+    cartDetails,
+    removeItem,
+    totalPrice,
+    redirectToCheckout,
+  } = useShoppingCart();
+
+  async function handleCheckoutClick(event: { preventDefault: () => void }) {
+    event.preventDefault();
+    try {
+      const response = await redirectToCheckout();
+      if (response?.error) {
+        console.log("result");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
   return (
-    <div className=" absolute lg:-right-20 md:-right-8 xs:-right-4 -top-[160%] z-[99] w-[100vw] h-[711vh] bg-[#00000030]">
-      <div className="lg:w-[30vw] md:w-[50vw] xs:w-[70vw] h-[103vh] bg-white absolute right-0 md:p-6 xs:px-[3vw] xs:py-8">
-        <div className="lg:text-2xl md:text-xl xs:text-xl font-semibold lg:h-14 md:h-12 xs:h-10 border-gray-300 border-b-2">
-          <p>Shopping Cart</p>
-        </div>
-        <div className="w-[99.9%] h-[20vh] flex items-center justify-between mt-10">
-          <div className="md:w-[111px] md:h-[95px] xs:h-[21vw] xs:w-[25vw] rounded-md bg-[#FBEBB5]">
-            <Image
-              src={"/asgaardsofa.png"}
-              alt=""
-              width={111}
-              height={110}
-              // fill
-            ></Image>
+    <Sheet open={shouldDisplayCart} onOpenChange={() => handleCartClick()}>
+      <SheetContent>
+        <SheetHeader>
+          <SheetTitle>Shopping Cart</SheetTitle>
+        </SheetHeader>
+        <div className="flex flex-col items-center h-full justify-between">
+          <div className="flex-1 mt-8 overflow-y-auto ">
+            <ul className="-my-6 divide-y divide-gray-200">
+              {cartCount === 0 ? (
+                <h1 className="text-lg py-6">
+                  You havenot any items in your cart
+                </h1>
+              ) : (
+                <>
+                  {Object.values(cartDetails ?? {}).map((product) => (
+                    <li
+                      key={product.id}
+                      className="py-6 flex items-start justify-between"
+                    >
+                      <div className="h-24 w-24 flex overflow-hidden rounded-md border border-gray-200">
+                        <Image
+                          src={product.image as string}
+                          alt="Product image"
+                          width={200}
+                          height={200}
+                        />
+                      </div>
+
+                      <div className="flex ml-4 flex-1 flex-col">
+                        <div>
+                          <div className="flex justify-between font-medium text-gray-900">
+                            <h3>{product.name}</h3>
+                            <p className="ml-4 text-gray-800">
+                              RS{product.price}
+                            </p>
+                          </div>
+                          <p className="mt-1 text-sm line-clamp-2 text-gray-500">
+                            {product.description}
+                          </p>
+                        </div>
+                        <div className="flex items-end justify-between">
+                          <div>
+                            <p>QTY: {product.quantity}</p>
+                          </div>
+                          <button
+                            type="button"
+                            className="text-indigo-700 hover:text-indigo-500"
+                            onClick={() => removeItem(product.id)}
+                          >
+                            <MdCancel size={20} />
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+                  ))}
+                </>
+              )}
+            </ul>
           </div>
           <div>
-            <div>
-              <span className="xs:font-normal md:text-base xs:text-sm">
-                Asgaard Sofa
-              </span>
-            </div>
-            <div>
-              <span className="md:text-base xs:text-sm font-normal">1</span> x{" "}
-              <span className="md:text-xs xs:text-[10px] font-medium text-[#B88E2F]">
-                RS. 250000
-              </span>
-            </div>
-          </div>
-          <div>
-            <MdCancel cursor={"pointer"} size={20} />
-          </div>
-        </div>
-        <div className=" lg:mt-60 md:mt-44 xs:mt-60 h-12 border-gray-300 border-b-2">
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-base font-normal">Subtotal</p>
-            </div>
-            <div>
-              <span className="text-base font-extrabold text-[#B88E2F]">
-                RS. 250000
-              </span>
-            </div>
-          </div>
-          <div className="flex items-center justify-around mt-10">
-            <div className="flex items-center justify-center md:w-[130px] md:h-[30px] xs:w-[100px] xs:h-[30px] border-black border-[1px] md:rounded-3xl xs:rounded-2xl transition-all hover:bg-yellow-400 hover:border-none hover:text-white">
-              <Link href={"/cart"}>View Cart</Link>
-            </div>
-            <div className="flex items-center justify-center md:w-[130px] md:h-[30px] xs:w-[100px] xs:h-[30px] border-black border-[1px] md:rounded-3xl xs:rounded-2xl transition-all hover:bg-yellow-400 hover:border-none hover:text-white">
-              <Link href={"/checkout"}>CheckOut</Link>
-            </div>
+            {cartCount === 0 ? (
+              <div className="pb-10">
+                <button
+                  onClick={() => handleCartClick()}
+                  className="w-full mt-4 px-4 py-2 bg-indigo-600 text-white hover:bg-indigo-500 rounded-md"
+                >
+                  Continue Shopping
+                </button>
+              </div>
+            ) : (
+              <div>
+                <div className="border-t border-gray-200 px-4 py-6 xs:px-6">
+                  <div className="flex justify-between text-base font-medium text-gray-900">
+                    <p>Subtotal:</p>
+                    <p>RS{totalPrice}</p>
+                  </div>
+                  <div>
+                    <p className="text-sm text-gray-500">
+                      Shipping and Taxes Calculated at Checkout
+                    </p>
+                  </div>
+                  <div>
+                    <button
+                      onClick={handleCheckoutClick}
+                      className="w-full mt-4 px-4 py-2 bg-indigo-600 text-white hover:bg-indigo-500 rounded-md"
+                    >
+                      Checkout
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
-      </div>
-    </div>
+      </SheetContent>
+    </Sheet>
   );
 };
 

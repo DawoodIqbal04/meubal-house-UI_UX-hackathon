@@ -7,7 +7,7 @@ const page = () => {
   return (
     <div className="overflow-x-hidden">
       <div>
-        <Header bgcolor="white" />
+        <Header bgcolor="white" placeHolder="" />
       </div>
       <div>
         <PageToper name="About" />

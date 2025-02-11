@@ -10,6 +10,8 @@ import SingleProductBottom from "@/app/components/SingleProductBottom";
 import { client } from "@/sanity/lib/client";
 import { Products } from "@/app/components/interface";
 import ImageGallery from "@/app/components/ImageGallery";
+import AddToCart from "@/app/components/AddToCart";
+import CheckoutNow from "@/app/components/CheckoutNow";
 
 async function getData(slug: string) {
   const query = `*[_type == "product" && slug.current == '${slug}'][0]{
@@ -19,7 +21,9 @@ async function getData(slug: string) {
     image,
     description,
     "slug": slug.current,
-    "category": category->name
+    "category": category->name,
+    stock,
+    price_id,
 }`;
 
   const product = await client.fetch(query);
@@ -37,7 +41,7 @@ const SingleProductPage = async ({ params }: { params: { slug: string } }) => {
   return (
     <div className="overflow-x-hidden">
       <div>
-        <Header bgcolor="white" />
+        <Header bgcolor="white" placeHolder=""/>
       </div>
       <div className="flex md:flex-row xs:flex-col items-start lg:px-16 md:px-8 xs:px-4 py-10 lg:gap-20 md:gap-10 w-[100%]">
         <div className="flex md:flex-row xs:flex-col-reverse lg:w-1/2 md:w-[55%] xs:w-[100%] gap-4">
@@ -75,28 +79,17 @@ const SingleProductPage = async ({ params }: { params: { slug: string } }) => {
             <p className="text-gray-700">{product.category}</p>
           </div>
           <div>
-            <p className="text-lg font-medium">Size</p>
-            <div className="flex space-x-2 mt-2">
-              {["L", "XL", "XS"].map((size) => (
-                <button
-                  key={size}
-                  className="px-4 py-2 border rounded-lg hover:bg-gray-100"
-                >
-                  {size}
-                </button>
-              ))}
-            </div>
+          <p className="text-xl font-medium">Stock</p>
+          <p className="text-gray-700">{product.stock > 0 ? 'Available': 'SoldOut'}</p>
           </div>
 
           <div className="flex lg:flex-row md:flex-col lg:gap-0 md:gap-7 items-center mt-7 md:pb-0 xs:pb-10 space-x-4">
-            <div className="flex items-center border rounded-lg">
-              <button className="px-4 py-2">-</button>
-              <span className="px-4">1</span>
-              <button className="px-4 py-2">+</button>
+            <div>
+              <AddToCart name={product.name} description={product.description} price={product.price} currency="USD" image={product.image[0]} stock={product.stock} key={product._id} price_id={product.price_id}/>
             </div>
-            <button className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
-              Add To Cart
-            </button>
+            <div>
+              <CheckoutNow name={product.name} description={product.description} price={product.price} currency="USD" image={product.image[0]} stock={product.stock} key={product._id} price_id={product.price_id}/>
+            </div>
           </div>
 
           <div className="text-gray-500 space-y-1 lg:mt-10 md:mt-10 text-base font-normal border-t w-[100%] pt-5 border-black">

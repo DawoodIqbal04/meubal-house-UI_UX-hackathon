@@ -5,9 +5,9 @@ import { IoArrowForward } from "react-icons/io5";
 const CategoryModel = () => {
   return (
     <div className="absolute hidden md:flex flex-col items-start gap-7 w-60 h-60 bg-[#f1eded] shadow-xl p-4">
-      <div className="flex items-center gap-2 font-bold hover:underline">
+      <div className="parent flex items-center gap-2 font-bold hover:underline">
         <Link href={"/shop"}>Shop All </Link>
-        <div>
+        <div className="child transition-all">
           <IoArrowForward />
         </div>
       </div>

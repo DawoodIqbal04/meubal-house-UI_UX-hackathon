@@ -13,7 +13,7 @@ const page = () => {
   return (
     <div className="min-h-screen overflow-x-hidden">
       <div>
-        <Header bgcolor="white" />
+        <Header bgcolor="white" placeHolder="Search Blogs" />
       </div>
       <div>
         <PageToper name="Blogs" />

@@ -9,7 +9,7 @@ const BlogCard = (props: {
   title: string;
 }) => {
   return (
-    <div className="lg:w-[360px] md:w-[300px] xs:w-[300px] lg:h-[510px] md:h-[450px] xs:h-[350px]">
+    <div className="lg:w-[360px] md:w-[300px] xs:w-[330px] lg:h-[510px] md:h-[450px] xs:h-[350px]">
       <div className=" w-full lg:h-[350px] xs:h-[300px] rounded-lg">
         <Image
           src={props.imageUrl}
@@ -19,7 +19,7 @@ const BlogCard = (props: {
           className=" object-cover"
         ></Image>
       </div>
-      <div className="flex flex-col items-center justify-center lg:gap-2 md:gap-3 xs:gap-1 lg:mt-10 md:mt-5 xs:mt-4">
+      <div className="flex flex-col items-center justify-center lg:gap-2 md:gap-3 xs:gap-1 lg:mt-10 md:mt-5 xs:mt-10">
         <p className="lg:font-normal xs:font-medium lg:text-xl xs:text-base xs:text-center">
           {props.title}
         </p>

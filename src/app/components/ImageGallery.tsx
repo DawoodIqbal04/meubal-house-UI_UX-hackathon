@@ -14,12 +14,12 @@ const ImageGallery = ({ image }: ImageGalleryProps) => {
     setBigImage(image);
   };
   return (
-    <div className="flex flex-col md:flex-row items-start lg:gap-8 md:gap-6 xs:gap-4">
+    <div className="flex flex-col flex-col-reverse md:flex-row items-start lg:gap-8 md:gap-6 xs:gap-4">
       <div className="flex md:flex-col items-start lg:gap-8 md:gap-6 xs:gap-4">
         {image.map((image, index) => (
           <div
             key={index}
-            className="bg-gray-100 lg:w-[90px] cursor-pointer md:w-[60px] xs:w-max flex  object-cover object-center lg:h-[90px] md:h-[60px] xs:h-max rounded-lg hover:opacity-75"
+            className="bg-gray-100 lg:w-[90px] cursor-pointer md:w-[60px] xs:w-full flex object-cover object-center lg:h-[90px] md:h-[60px] xs:h-max rounded-lg hover:opacity-75"
           >
             <Image
               src={urlFor(image).url()}

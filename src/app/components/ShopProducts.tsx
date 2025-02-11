@@ -23,12 +23,12 @@ const ShopProducts = async () => {
 
   return (
     <div className="bg-white overflow-x-hidden">
-      <div className=" min-h-[300vh] w-full flex items-start justify-center lg:gap-6 md:gap-x-16 px-12 flex-wrap">
+      <div className=" min-h-[300vh] w-full flex items-start justify-center lg:gap-6 md:gap-x-16 md:px-12 flex-wrap">
         {products.map((product) => (
           <Link
             href={`/product/${product.slug}`}
             key={product._id}
-            className="flex flex-col items-center justify-between lg:w-[270px] md:w-[300px] xs:w-[380px] h-[350px] mt-10"
+            className="flex flex-col items-center justify-between lg:w-[270px] md:w-[300px] xs:w-[350px] h-[350px] mt-10"
           >
             <div className="flex items-center w-full h-[250px] product hover:opacity-75">
               <Image
@@ -40,9 +40,9 @@ const ShopProducts = async () => {
                 width={300}
               ></Image>
             </div>
-            <div className="flex flex-col items-start justify-between gap-5 w-full h-100px">
+            <div className="flex flex-col items-start justify-between gap-5 w-full">
               <p className="font-normal text-base">{product.name}</p>
-              <div className="flex items-center gap-16">
+              <div className="flex items-center justify-between w-full">
                 <p className="font-medium text-xl">RS.{product.price}</p>
                 <p className="font-medium text-base text-yellow-500">
                   {product.category}

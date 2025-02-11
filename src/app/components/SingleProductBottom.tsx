@@ -5,7 +5,7 @@ const SingleProductBottom = () => {
   return (
     <div>
       <div className="bg-white min-h-screen border border-t-gray-400 flex flex-col items-center justify-centerf py-10">
-        <div className="lg:max-w-5xl md:max-w-2xl xs:max-w-screen md:px-0 xs:px-5 w-full ">
+        <div className="lg:max-w-5xl md:max-w-2xl xs:max-w-screen md:px-0 xs:px-6 w-full ">
           <div className=" rounded-lg">
             <div className="flex md:space-x-6 xs:space-x-16 items-center justify-center mb-10 md:text-lg xs:text-sm font-medium">
               <a href="#" className="text-black border-b-2 border-black">
