@@ -4,6 +4,7 @@ import { Poppins } from "next/font/google";
 import Footer from "./components/footer";
 import CartModel from "./components/CartModel";
 import CartProviders from "./components/CartProviders";
+import {ClerkProvider} from '@clerk/nextjs'
 
 const poppins = Poppins({
   weight: ["200", "400", "500", "700", "900"],
@@ -26,11 +27,13 @@ export default function RootLayout({
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
       </head>
       <body className={`${poppins.className} `}>
+      <ClerkProvider>
         <CartProviders>
           <CartModel />
           {children}
           <Footer />
         </CartProviders>
+      </ClerkProvider>
       </body>
     </html>
   );

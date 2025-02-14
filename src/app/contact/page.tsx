@@ -118,7 +118,7 @@ const page = () => {
               <div>
                 <button
                   type="submit"
-                  className="w-[230px] h-[48px] transition-all border-black border rounded-xl mt-10 hover:bg-indigo-500 hover:text-white hover:border-none "
+                  className="w-[230px] h-[48px] transition-all border-black border rounded-xl mt-10 hover:bg-blue-500 hover:text-white hover:border-none "
                 >
                   Submit
                 </button>

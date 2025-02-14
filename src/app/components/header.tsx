@@ -10,13 +10,12 @@ import MenuModel from "./MenuModel";
 import CategoryModel from "./CategoryModel";
 import { useShoppingCart } from "use-shopping-cart";
 import SearchModel from "./SearchModel";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 
-const Header = (props: { bgcolor: string, placeHolder: string }) => {
+const Header = (props: { bgcolor: string; placeHolder: string }) => {
   const { handleCartClick, cartCount } = useShoppingCart();
 
   const [isCategoryOpen, setIsCategoryOpen] = useState(false);
-
-  
 
   return (
     <div
@@ -36,16 +35,24 @@ const Header = (props: { bgcolor: string, placeHolder: string }) => {
             <p>Meubel House</p>
           </div>
         </div>
-        <div className="relative cursor-pointer lg:hidden md:hidden xs:flex">
+        <div className="relative cursor-pointer md:hidden xs:flex items-center gap-3">
           <button onClick={() => handleCartClick()}>
-            <div className="flex items-center justify-center absolute w-[18px] h-[18px] top-[-20%] right-[-20%] rounded-full text-white text-[13px] bg-red-500">
+            <div className="flex items-center justify-center absolute w-[16px] h-[16px] top-[-5%] right-[50%] rounded-full text-white text-[11px] bg-red-500 cursor-pointer">
               <span>{cartCount}</span>
             </div>
             <AiOutlineShoppingCart size={25} cursor={"pointer"} />
           </button>
+          <div>
+          <SignedOut>
+            <SignInButton />
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+          </div>
         </div>
       </div>
-      <div className="lg:flex md:flex xs:hidden">
+      <div className="md:flex xs:hidden">
         <ul className="flex items-center lg:gap-12 md:gap-6 font-medium lg:text-base md:text-sm navlinks">
           <li className="relative">
             <Link href={"/"}>Home</Link>
@@ -69,12 +76,7 @@ const Header = (props: { bgcolor: string, placeHolder: string }) => {
 
       <div className="md:flex xs:hidden items-center justify-between lg:gap-8 md:gap-4 relative">
         <div>
-          <Link href={"/account"}>
-            <IoPersonOutline size={25} />
-          </Link>
-        </div>
-        <div>
-          <SearchModel placeholder={props.placeHolder}/>
+          <SearchModel placeholder={props.placeHolder} />
         </div>
         <div>
           <Link href={""}>
@@ -88,6 +90,14 @@ const Header = (props: { bgcolor: string, placeHolder: string }) => {
             </div>
             <AiOutlineShoppingCart size={25} cursor={"pointer"} />
           </div>
+        </div>
+        <div>
+          <SignedOut>
+            <SignInButton />
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
         </div>
       </div>
     </div>

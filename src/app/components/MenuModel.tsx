@@ -64,11 +64,6 @@ const MenuModel = () => {
         </div>
         <div className=" flex items-center mt-10 gap-16 relative">
           <div>
-            <Link href={"/account"}>
-              <IoPersonOutline size={25} />
-            </Link>
-          </div>
-          <div>
             <Link href={""}>
               <IoSearchOutline size={25} />
             </Link>

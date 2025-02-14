@@ -29,7 +29,7 @@ const page = () => {
                     type="text"
                     id="login-email"
                     placeholder="anyone123@gmail.com"
-                    className="mt-1 block md:w-4/5 xs:w-full p-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 focus:outline-none sm:text-sm"
+                    className="mt-1 block md:w-4/5 xs:w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 focus:outline-none sm:text-sm"
                   />
                 </div>
                 <div className="mb-4">
@@ -43,14 +43,14 @@ const page = () => {
                     type="password"
                     id="login-password"
                     placeholder="*******"
-                    className="mt-1 block md:w-4/5 xs:w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:outline-none focus:border-indigo-500 sm:text-sm"
+                    className="mt-1 block md:w-4/5 xs:w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:outline-none focus:border-blue-500 sm:text-sm"
                   />
                 </div>
                 <div className="flex items-center mb-4">
                   <input
                     type="checkbox"
                     id="remember-me"
-                    className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 focus:outline-none border-gray-300 rounded"
+                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 focus:outline-none border-gray-300 rounded"
                   />
                   <label
                     htmlFor="remember-me"
@@ -61,13 +61,13 @@ const page = () => {
                 </div>
                 <button
                   type="submit"
-                  className=" transition-all w-4/5 bg-white text-indigo-500 border-gray-300 border py-2 rounded-md text-sm font-medium hover:bg-indigo-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  className=" transition-all w-4/5 bg-white text-blue-500 border-gray-300 border py-2 rounded-md text-sm font-medium hover:bg-blue-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                 >
                   Log In
                 </button>
                 <a
                   href="#"
-                  className="text-sm w-max text-indigo-500 mt-4 block hover:underline"
+                  className="text-sm w-max text-blue-500 mt-4 block hover:underline"
                 >
                   Lost Your Password?
                 </a>
@@ -88,7 +88,7 @@ const page = () => {
                     type="email"
                     id="register-email"
                     placeholder="anyone123@gmail.com"
-                    className="mt-1 block md:w-4/5 xs:w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:outline-none focus:border-indigo-500 sm:text-sm"
+                    className="mt-1 block md:w-4/5 xs:w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:outline-none focus:border-blue-500 sm:text-sm"
                   />
                 </div>
                 <p className="text-sm text-gray-500 mb-4">
@@ -97,7 +97,7 @@ const page = () => {
                 </p>
                 <button
                   type="submit"
-                  className=" transition-all w-4/5 bg-white text-indigo-500 border border-gray-300 py-2 rounded-md text-sm font-medium hover:bg-indigo-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  className=" transition-all w-4/5 bg-white text-blue-500 border border-gray-300 py-2 rounded-md text-sm font-medium hover:bg-blue-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                 >
                   Register
                 </button>
@@ -106,7 +106,7 @@ const page = () => {
                 Your personal data will be used to support your experience
                 throughout this website, to manage access to your account, and
                 for other purposes described in our{" "}
-                <a href="#" className="text-indigo-500 hover:underline">
+                <a href="#" className="text-blue-500 hover:underline">
                   privacy policy.
                 </a>
               </p>

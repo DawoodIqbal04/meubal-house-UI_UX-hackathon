@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { MdCancel } from "react-icons/md";
+import { MdCancel, MdPlusOne } from "react-icons/md";
 import {
   Sheet,
   SheetContent,
@@ -10,6 +10,7 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import { useShoppingCart } from "use-shopping-cart";
+import { Minus, Plus } from "lucide-react";
 
 const CartModel = () => {
   const {
@@ -20,6 +21,8 @@ const CartModel = () => {
     removeItem,
     totalPrice,
     redirectToCheckout,
+    incrementItem,
+    decrementItem,
   } = useShoppingCart();
 
   async function handleCheckoutClick(event: { preventDefault: () => void }) {
@@ -76,15 +79,32 @@ const CartModel = () => {
                         </div>
                         <div className="flex items-end justify-between">
                           <div>
-                            <p>QTY: {product.quantity}</p>
+                            <p>Qty: {product.quantity}</p>
                           </div>
+                          <div className="flex items-center gap-2">
+
                           <button
                             type="button"
-                            className="text-indigo-700 hover:text-indigo-500"
+                            className="text-white hover:bg-gray-400 bg-gray-500 rounded-full"
+                            onClick={() => incrementItem(product.id)}
+                            >
+                            <Plus size={16} />
+                          </button>
+                          <button
+                            type="button"
+                            className="text-blue-700 hover:text-blue-500"
                             onClick={() => removeItem(product.id)}
-                          >
+                            >
                             <MdCancel size={20} />
                           </button>
+                          <button
+                            type="button"
+                            className="text-white hover:bg-gray-400 bg-gray-500 rounded-full"
+                            onClick={() => decrementItem(product.id)}
+                            >
+                            <Minus size={16} />
+                          </button>
+                            </div>
                         </div>
                       </div>
                     </li>
@@ -98,7 +118,7 @@ const CartModel = () => {
               <div className="pb-10">
                 <button
                   onClick={() => handleCartClick()}
-                  className="w-full mt-4 px-4 py-2 bg-indigo-600 text-white hover:bg-indigo-500 rounded-md"
+                  className="w-full mt-4 px-4 py-2 bg-blue-600 text-white hover:bg-blue-500 rounded-md"
                 >
                   Continue Shopping
                 </button>
@@ -118,7 +138,7 @@ const CartModel = () => {
                   <div>
                     <button
                       onClick={handleCheckoutClick}
-                      className="w-full mt-4 px-4 py-2 bg-indigo-600 text-white hover:bg-indigo-500 rounded-md"
+                      className="w-full mt-4 px-4 py-2 bg-blue-600 text-white hover:bg-blue-500 rounded-md"
                     >
                       Checkout
                     </button>
