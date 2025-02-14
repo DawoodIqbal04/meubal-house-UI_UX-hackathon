@@ -26,7 +26,7 @@ const HomePage = async () => {
   return (
     <div className="overflow-x-hidden">
       <div>
-        <Header bgcolor={"#FBEBB5"} placeHolder=""/>
+        <Header bgcolor={"#FBEBB5"} placeHolder="" />
       </div>
       <div>
         <Hero />
