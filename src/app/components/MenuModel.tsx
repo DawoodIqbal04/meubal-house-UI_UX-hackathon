@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React from "react";
-import { IoHeartOutline, IoSearchOutline } from "react-icons/io5";
 import {
   Sheet,
   SheetContent,
