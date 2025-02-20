@@ -9,6 +9,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { CgMenuLeft } from "react-icons/cg";
+import SearchModel from "./SearchModel";
 
 const MenuModel = () => {
   return (
@@ -58,18 +59,6 @@ const MenuModel = () => {
                   <Link href={"/Diningroom"}>Dining Room</Link>
                 </li>
               </ul>
-            </div>
-            <div className=" flex items-center mt-10 gap-16 relative">
-              <div>
-                <Link href={""}>
-                  <IoSearchOutline size={25} />
-                </Link>
-              </div>
-              <div>
-                <Link href={""}>
-                  <IoHeartOutline size={25} />
-                </Link>
-              </div>
             </div>
           </div>
         </div>

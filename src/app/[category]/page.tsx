@@ -24,7 +24,7 @@ const CategoryPage = async ({ params }: { params: { category: string } }) => {
   return (
     <div>
       <div>
-        <Header bgcolor="white" placeHolder="Search Products"/>
+        <Header bgcolor="white"/>
       </div>
       <div>
         <PageToper
@@ -38,6 +38,9 @@ const CategoryPage = async ({ params }: { params: { category: string } }) => {
               : params.category === "Outdoor"
               ? "Outdoor"
               : ''
+          }
+          url={
+            params.category
           }
         />
       </div>

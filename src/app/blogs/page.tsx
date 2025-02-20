@@ -13,10 +13,10 @@ const page = () => {
   return (
     <div className="min-h-screen overflow-x-hidden">
       <div>
-        <Header bgcolor="white" placeHolder="Search Blogs" />
+        <Header bgcolor="white"/>
       </div>
       <div>
-        <PageToper name="Blogs" />
+        <PageToper name="Blogs" url="blogs"/>
       </div>
       <div className="w-full flex lg:flex-row xs:flex-col-reverse items-start justify-between gap-16 py-10 lg:pt-20 lg:px-20 md:px-10 xs:px-4">
         <div className="flex flex-col items-start justify-between lg:gap-10 md:gap-20 xs:gap-10">

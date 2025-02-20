@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { IoHeartOutline } from "react-icons/io5";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import MenuModel from "./MenuModel";
 import CategoryModel from "./CategoryModel";
@@ -11,7 +10,7 @@ import { useShoppingCart } from "use-shopping-cart";
 import SearchModel from "./SearchModel";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 
-const Header = (props: { bgcolor: string; placeHolder: string }) => {
+const Header = (props: { bgcolor: string }) => {
   const { handleCartClick, cartCount } = useShoppingCart();
 
   const [isCategoryOpen, setIsCategoryOpen] = useState(false);
@@ -21,26 +20,41 @@ const Header = (props: { bgcolor: string; placeHolder: string }) => {
       className={`lg:h-[100px] md:h-[80px] xs:h-[60px] w-full bg-[${props.bgcolor}] flex items-center lg:justify-around md:justify-around xs:justify-between lg:px-0 md:px-0 xs:px-6`}
     >
       <div className="flex items-center md:justify-normal md:w-auto xs:justify-between xs:w-full">
-        <div className="flex items-center md:hidden lg:hidden gap-4">
+        <div className="flex items-center md:hidden gap-4">
           <div>
             <MenuModel />
           </div>
         </div>
-        <div className="flex items-center">
-          <div className="lg:h-[75px] lg:w-[75px] md:h-[70px] md:w-[70px] xs:h-[65px] xs:w-[65px]">
-            <Image src={"/Logo.png"} height={75} width={75} alt="Logo"></Image>
+        <div className="flex md:flex-row xs:flex-col md:mt-0 xs:-mt-4 items-center">
+          <div className="lg:h-[75px] lg:w-[75px] md:h-[70px] md:w-[70px] xs:h-[60px] xs:w-[60px]">
+            <Link href={"/"}>
+              <Image
+                src={"/Logo.png"}
+                height={75}
+                width={75}
+                alt="Logo"
+              ></Image>
+            </Link>
           </div>
-          <div className=" font-bold uppercase lg:text-xl md:text-lg xs:text-base xs:-mr-1 cursor-default">
+          <div className=" font-bold md:mt-0 xs:-mt-3 lg:text-xl md:text-lg xs:text-sm cursor-default">
             <p>Meubel House</p>
           </div>
         </div>
-        <div className="relative cursor-pointer md:hidden xs:flex items-center gap-3">
-          <button onClick={() => handleCartClick()}>
-            <div className="flex items-center justify-center absolute w-[16px] h-[16px] top-[-5%] right-[50%] rounded-full text-white text-[11px] bg-red-500 cursor-pointer">
-              <span>{cartCount}</span>
+        {/* Mobile navbar */}
+        <div className="relative cursor-pointer md:hidden xs:flex items-center gap-5">
+          <div className="relative">
+            <div>
+              <SearchModel />
             </div>
-            <AiOutlineShoppingCart size={25} cursor={"pointer"} />
-          </button>
+          </div>
+          <div className="relative" onClick={() => handleCartClick()}>
+            <div>
+              <div className="flex items-center justify-center absolute w-[16px] h-[16px] -top-1 -right-1 rounded-full text-white text-[12px] bg-red-500 cursor-pointer">
+                <span>{cartCount}</span>
+              </div>
+              <AiOutlineShoppingCart size={25} cursor={"pointer"} />
+            </div>
+          </div>
           <div>
             <SignedOut>
               <SignInButton />
@@ -75,16 +89,11 @@ const Header = (props: { bgcolor: string; placeHolder: string }) => {
 
       <div className="md:flex xs:hidden items-center justify-between lg:gap-8 md:gap-4 relative">
         <div>
-          <SearchModel placeholder={props.placeHolder} />
-        </div>
-        <div>
-          <Link href={""}>
-            <IoHeartOutline size={25} />
-          </Link>
+          <SearchModel />
         </div>
         <div className="relative" onClick={() => handleCartClick()}>
           <div>
-            <div className="flex items-center justify-center absolute w-[18px] h-[18px] top-[-20%] right-[-20%] rounded-full text-white text-[13px] bg-red-500 cursor-pointer">
+            <div className="flex items-center justify-center absolute w-[16px] h-[16px] -top-1 right-[-0.50rem] rounded-full text-white text-[12px] bg-red-500 cursor-pointer">
               <span>{cartCount}</span>
             </div>
             <AiOutlineShoppingCart size={25} cursor={"pointer"} />

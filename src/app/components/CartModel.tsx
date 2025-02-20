@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/sheet";
 import { useShoppingCart } from "use-shopping-cart";
 import { Minus, Plus } from "lucide-react";
+import { useUser, SignInButton } from "@clerk/nextjs"; // Import Clerk
 
 const CartModel = () => {
   const {
@@ -25,17 +26,20 @@ const CartModel = () => {
     decrementItem,
   } = useShoppingCart();
 
+  const { isSignedIn } = useUser(); // Check if user is signed in
+
   async function handleCheckoutClick(event: { preventDefault: () => void }) {
     event.preventDefault();
     try {
       const response = await redirectToCheckout();
       if (response?.error) {
-        console.log("result");
+        console.log("Checkout error");
       }
     } catch (error) {
       console.log(error);
     }
   }
+
   return (
     <Sheet open={shouldDisplayCart} onOpenChange={() => handleCartClick()}>
       <SheetContent>
@@ -46,9 +50,7 @@ const CartModel = () => {
           <div className="flex-1 mt-8 overflow-y-auto ">
             <ul className="-my-6 divide-y divide-gray-200">
               {cartCount === 0 ? (
-                <h1 className="text-lg py-6">
-                  You havenot any items in your cart
-                </h1>
+                <h1 className="text-lg py-6">You have no items in your cart</h1>
               ) : (
                 <>
                   {Object.values(cartDetails ?? {}).map((product) => (
@@ -135,12 +137,20 @@ const CartModel = () => {
                     </p>
                   </div>
                   <div>
-                    <button
-                      onClick={handleCheckoutClick}
-                      className="w-full mt-4 px-4 py-2 bg-blue-600 text-white hover:bg-blue-500 rounded-md"
-                    >
-                      Checkout
-                    </button>
+                    {isSignedIn ? (
+                      <button
+                        onClick={handleCheckoutClick}
+                        className="w-full mt-4 px-4 py-2 bg-blue-600 text-white hover:bg-blue-500 rounded-md"
+                      >
+                        Checkout
+                      </button>
+                    ) : (
+                      <SignInButton>
+                        <button className="w-full mt-4 px-4 py-2 bg-gray-500 text-white hover:bg-gray-600 rounded-md">
+                          Sign in to Checkout
+                        </button>
+                      </SignInButton>
+                    )}
                   </div>
                 </div>
               </div>

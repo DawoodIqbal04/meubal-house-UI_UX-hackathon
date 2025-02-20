@@ -12,6 +12,7 @@ import { Products } from "@/app/components/interface";
 import ImageGallery from "@/app/components/ImageGallery";
 import AddToCart from "@/app/components/AddToCart";
 import CheckoutNow from "@/app/components/CheckoutNow";
+import SPB from "@/app/components/SingleProductBreadcrumb";
 
 async function getData(slug: string) {
   const query = `*[_type == "product" && slug.current == '${slug}'][0]{
@@ -41,7 +42,10 @@ const SingleProductPage = async ({ params }: { params: { slug: string } }) => {
   return (
     <div className="overflow-x-hidden">
       <div>
-        <Header bgcolor="white" placeHolder=""/>
+        <Header bgcolor="white"/>
+      </div>
+      <div className="p-10 pl-20">
+        <SPB name={product.name} />
       </div>
       <div className="flex md:flex-row xs:flex-col items-start lg:px-16 md:px-8 xs:px-4 py-10 lg:gap-20 md:gap-10 w-[100%]">
         <div className="flex md:flex-row xs:flex-col-reverse lg:w-1/2 md:w-[55%] xs:w-[100%] gap-4">
@@ -94,7 +98,7 @@ const SingleProductPage = async ({ params }: { params: { slug: string } }) => {
 
           <div className="text-gray-500 space-y-1 lg:mt-10 md:mt-10 text-base font-normal border-t w-[100%] pt-5 border-black">
             <p className="flex items-center gap-3">
-              <span>SKU</span>: SS001
+              <span>SKU</span>: {product._id}
             </p>
             <p className="flex items-center gap-3">
               <span>Tags</span>: Sofa, Chair, Home, Shop
@@ -103,7 +107,7 @@ const SingleProductPage = async ({ params }: { params: { slug: string } }) => {
               <span>Share</span>:
               <div className="flex items-center gap-2 text-black">
                 <Link
-                  className="hover:opacity-75"
+                  className="hover:opacity-70"
                   href={
                     "https://www.linkedin.com/in/muhammad-dawood-bb469b29a/?originalSubdomain=pk"
                   }
@@ -111,7 +115,7 @@ const SingleProductPage = async ({ params }: { params: { slug: string } }) => {
                   <FaLinkedin />
                 </Link>
                 <Link
-                  className="hover:opacity-75"
+                  className="hover:opacity-70"
                   href={
                     "https://www.facebook.com/people/Dawood-Al-Zadjali/pfbid02GVr5KZf5u8DTYWojbF627XZ6hUFD1chaTajYozNPZHeQLaQH4ebikxw2edYigFMGl/"
                   }
@@ -119,7 +123,7 @@ const SingleProductPage = async ({ params }: { params: { slug: string } }) => {
                   <FaFacebook />
                 </Link>
                 <Link
-                  className="hover:opacity-75"
+                  className="hover:opacity-70"
                   href={"https://github.com/DawoodIqbal04"}
                 >
                   <FaGithub />

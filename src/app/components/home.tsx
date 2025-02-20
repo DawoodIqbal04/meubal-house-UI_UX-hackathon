@@ -26,7 +26,7 @@ const HomePage = async () => {
   return (
     <div className="overflow-x-hidden">
       <div>
-        <Header bgcolor={"#FBEBB5"} placeHolder="" />
+        <Header bgcolor={"#FBEBB5"}/>
       </div>
       <div>
         <Hero />
@@ -98,7 +98,7 @@ const HomePage = async () => {
                 <p className="font-normal text-base">{product.name}</p>
                 <div className="flex items-center justify-between w-full">
                   <p className="font-medium text-xl">RS.{product.price}</p>
-                  <p className="font-medium text-base text-yellow-500">
+                  <p className="font-medium text-base text-gray-400">
                     {product.category}
                   </p>
                 </div>

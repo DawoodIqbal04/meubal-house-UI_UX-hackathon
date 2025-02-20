@@ -27,7 +27,7 @@ body {
 }
 
 .parent:hover .child{
-  transform: translateX(50%);
+  transform: rotate(-50deg);
 }
 
 @keyframes checkmark {

@@ -10,10 +10,10 @@ const page = () => {
   return (
     <div className="overflow-x-hidden">
       <div>
-        <Header bgcolor="white" placeHolder="" />
+        <Header bgcolor="white"/>
       </div>
       <div>
-        <PageToper name="Contact" />
+        <PageToper name="Contact" url="contact"/>
       </div>
 
       <div className="w-full min-h-[150vh] flex flex-col items-center justify-around lg:py-20 md:py-16 xs:py-10">
