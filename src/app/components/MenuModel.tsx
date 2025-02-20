@@ -8,7 +8,6 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { CgMenuLeft } from "react-icons/cg";
-import SearchModel from "./SearchModel";
 
 const MenuModel = () => {
   return (
