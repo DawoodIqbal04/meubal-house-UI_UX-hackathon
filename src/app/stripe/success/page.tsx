@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useShoppingCart } from "use-shopping-cart";
+import Header from "@/app/components/header";
 
 export default function SuccessPage() {
 
@@ -12,6 +13,12 @@ export default function SuccessPage() {
 
 
   return (
+    <div>
+
+    
+    <div>
+      <Header bgcolor="white" />
+    </div>
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
       <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
         <div className="flex justify-center mb-6">
@@ -54,6 +61,7 @@ export default function SuccessPage() {
             </motion.button>
         </Link>
       </div>
+    </div>
     </div>
   );
 }
